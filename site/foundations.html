@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fondasi — BKC Design System V1</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="site.css"><script src="embed.js" defer></script>
+</head><body>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="index.html"><img src="../assets/logo-emblem.png" alt=""><span><b>BUMI KALA CHARTA</b><em>Design System · V1</em></span></a>
+<nav>
+<div class="grp">Mulai</div>
+<a href="index.html">Ikhtisar</a>
+<a href="start.html">Cara pakai</a>
+<a href="ai.html">Pakai dengan AI</a>
+<div class="grp">Fondasi</div>
+<a href="foundations.html" aria-current="page">Warna, tipografi, spacing</a>
+<a href="brand.html">Brand &amp; pola</a>
+<div class="grp">Bangun</div>
+<a href="components.html">Komponen</a>
+<a href="templates.html">Template &amp; kit</a>
+</nav>
+<div class="side-foot">v1.0 · September 2026</div>
+</aside>
+<main>
+<p class="eyebrow">Fondasi</p>
+<h1>Warna, tipografi, spacing</h1>
+<p class="lead">Semua yang ada di halaman ini dirender langsung dari file token — jadi apa yang terlihat di sini selalu sama dengan yang dipakai di produk.</p>
+
+<h2>Warna</h2>
+<p>Enam nilai inti dari brand guideline, lalu diperluas menjadi skala 10 langkah untuk hijau, oranye, dan netral hangat. <strong>Hijau #358C67 memimpin</strong> sebagai identitas dan permukaan; <strong>oranye #EA9012 hanya menunjuk</strong> — aksi, sorotan, penanda status. Netralnya selalu hangat, berbasis kertas #EDECE9, tidak pernah abu kebiruan.</p>
+<ds-embed src="../guidelines/color-brand.html" w="700" h="130" label="Brand core" note="Enam nilai yang diterbitkan di brand guideline"></ds-embed>
+<ds-embed src="../guidelines/color-green-scale.html" w="700" h="126" label="Green scale" note="500 adalah nilai brand"></ds-embed>
+<ds-embed src="../guidelines/color-orange-scale.html" w="700" h="126" label="Orange scale" note="400 adalah nilai brand — aksen saja"></ds-embed>
+<ds-embed src="../guidelines/color-neutrals.html" w="700" h="126" label="Warm neutrals" note="Berbasis kertas #EDECE9"></ds-embed>
+<h3>Warna semantik</h3>
+<p>Dalam kode, jangan panggil nilai skala langsung. Pakai token semantik supaya perannya jelas dan bisa berubah tanpa mengubah markup.</p>
+<ds-embed src="../guidelines/color-semantic-surface.html" w="700" h="150" label="Semantic — surface"></ds-embed>
+<ds-embed src="../guidelines/color-semantic-text.html" w="700" h="150" label="Semantic — text"></ds-embed>
+<ds-embed src="../guidelines/color-status.html" w="700" h="150" label="Status" note="Sukses, peringatan, bahaya, info"></ds-embed>
+<ds-embed src="../guidelines/color-emblem.html" w="700" h="130" label="Emblem values" note="Dua warna yang datang dari emblem bulat"></ds-embed>
+<div class="rules">
+<div class="do"><h5>Lakukan</h5><ul><li>Pakai <code>--surface-*</code> dan <code>--text-*</code>, bukan hex.</li><li>Oranye untuk satu aksi utama per layar.</li><li>Teks di atas hijau selalu putih penuh.</li></ul></div>
+<div class="dont"><h5>Hindari</h5><ul><li>Oranye sebagai warna latar besar.</li><li>Abu netral dari palet lain (kebiruan).</li><li>Gradien antara hijau dan oranye.</li></ul></div>
+</div>
+
+<h2>Tipografi</h2>
+<p><strong>IBM Plex Sans</strong> untuk semua teks, <strong>IBM Plex Mono</strong> untuk data: koordinat, datum, tanggal, kode, dan eyebrow. Display di-track rapat (−0.03em) pada leading 1.06; body dibuka ke 1.6 dan tidak pernah lebih lebar dari 38em. Bobot yang dipakai hanya 400, 500, 600, 700 — dan 700 khusus wordmark.</p>
+<ds-embed src="../guidelines/type-display.html" w="700" h="210" label="Display ramp"></ds-embed>
+<ds-embed src="../guidelines/type-titles.html" w="700" h="150" label="Titles" note="30 / 24 / 18px"></ds-embed>
+<ds-embed src="../guidelines/type-body.html" w="700" h="200" label="Body & captions" note="17 / 15 / 13.5 / 12px"></ds-embed>
+<ds-embed src="../guidelines/type-mono.html" w="700" h="190" label="Mono / data"></ds-embed>
+<ds-embed src="../guidelines/type-wordmark.html" w="700" h="150" label="Wordmark treatment" note="Bold, kapital, tracking 0.16em — tidak pernah miring"></ds-embed>
+<div class="note"><p>Angka yang bisa dibandingkan — luas, koordinat, jumlah titik, tanggal — selalu mono. Ini bukan selera: kolom angka jadi sejajar dan salah baca berkurang.</p></div>
+
+<h2>Spacing &amp; bentuk</h2>
+<p>Basis 4px, 13 langkah, dipanggil lewat <code>--space-1</code> sampai <code>--space-13</code>. Kartu: padding 24px, jarak antar elemen 20px, gutter halaman 56px. Radius membulat tapi tidak menggelembung: pill untuk aksi, 20px untuk kartu, 24–28px untuk band full-bleed. Bayangannya tinta hangat, tidak pernah hitam.</p>
+<ds-embed src="../guidelines/spacing-scale.html" w="700" h="150" label="Scale" note="4px base, 13 langkah"></ds-embed>
+<ds-embed src="../guidelines/spacing-in-use.html" w="700" h="210" label="Card anatomy" note="24px pad · 20px gap · 56px gutter"></ds-embed>
+<ds-embed src="../guidelines/shape-radii.html" w="700" h="150" label="Radii"></ds-embed>
+<ds-embed src="../guidelines/shape-elevation.html" w="700" h="170" label="Elevation" note="Border saat diam, bayangan saat hover"></ds-embed>
+<ds-embed src="../guidelines/shape-states.html" w="700" h="170" label="Interaction states" note="Tinta → hijau saat hover; kartu terangkat 3px; 180ms"></ds-embed>
+</main>
+</div>
+</body></html>

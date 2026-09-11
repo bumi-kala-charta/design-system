@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><title>BKC — Technical &amp; Precise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--g:#358C67;--g2:#0D8C23;--o:#EA9012;--paper:#EDECE9;--ink:#101512;--line:#c9c7c1}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--paper);color:var(--ink);width:1280px;-webkit-font-smoothing:antialiased}
+a{color:var(--g);text-decoration:none}a:hover{color:var(--g2)}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.wrap{border-left:1px solid var(--line);border-right:1px solid var(--line);margin:0 40px;background:#fff}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:52px;border-bottom:1px solid var(--line)}
+.mark{display:flex;align-items:baseline;gap:8px}
+.mark b{font-weight:700;font-size:14px;letter-spacing:.18em}
+.mark span{color:var(--g)}
+nav ul{display:flex;gap:22px;list-style:none}
+nav li{font-size:12px;letter-spacing:.04em}
+nav li a{color:#3a423d}
+.navcta{border:1px solid var(--ink);padding:6px 12px;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.hero{position:relative;display:grid;grid-template-columns:1fr 420px;border-bottom:1px solid var(--line);overflow:hidden}
+.contour{position:absolute;inset:0;background-image:repeating-radial-gradient(circle at 82% 120%,transparent 0 26px,rgba(53,140,103,.28) 26px 27px),linear-gradient(to right,rgba(53,140,103,.10) 0 1px,transparent 1px 100%),linear-gradient(to bottom,rgba(53,140,103,.10) 0 1px,transparent 1px 100%);background-size:auto,64px 64px,64px 64px}
+.heroL{position:relative;padding:56px 20px 40px;z-index:1}
+.tick{display:flex;gap:14px;align-items:center;color:var(--g);margin-bottom:26px}
+.tick i{width:14px;height:14px}
+h1{font-size:52px;line-height:1.04;font-weight:600;letter-spacing:-.025em;max-width:9.5em;text-wrap:pretty}
+h1 em{font-style:normal;color:var(--g)}
+.sub{margin-top:20px;max-width:38em;font-size:15px;line-height:1.6;color:#4a524c}
+.btns{display:flex;gap:10px;margin-top:30px}
+.btn{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:13px;font-weight:500;border:1px solid var(--ink);background:var(--ink);color:#fff}
+.btn:hover{background:var(--g)}
+.btn.alt{background:transparent;color:var(--ink)}
+.btn.alt:hover{background:var(--paper);color:var(--ink)}
+.btn i{width:15px;height:15px}
+.heroR{position:relative;border-left:1px solid var(--line);background:#fff;z-index:1}
+.coord{display:flex;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--line);color:#7c837d}
+.readout{padding:14px}
+.row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:9px 0;border-bottom:1px dotted var(--line);font-size:12px}
+.row:last-child{border:0}
+.row span:last-child{font-family:'IBM Plex Mono',monospace;font-size:12px}
+.row b{font-weight:500}
+.badge{background:var(--o);color:#fff;padding:1px 6px;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
+.stat{padding:18px 20px;border-right:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{display:block;font-size:30px;font-weight:600;letter-spacing:-.02em;font-family:'IBM Plex Mono',monospace}
+.stat span{color:#7c837d;margin-top:4px;display:block}
+.secthead{display:flex;justify-content:space-between;align-items:flex-end;padding:26px 20px 14px}
+.secthead h2{font-size:20px;font-weight:600;letter-spacing:-.01em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.card{padding:20px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:12px}
+.card:last-child{border:0}
+.card:hover{background:#fbfbfa}
+.card .no{color:var(--g)}
+.card i{width:20px;height:20px;color:var(--g);stroke-width:1.5}
+.card h3{font-size:16px;font-weight:600}
+.card p{font-size:13px;line-height:1.55;color:#5a625c}
+.card .meta{display:flex;gap:8px;margin-top:auto;padding-top:8px;border-top:1px dotted var(--line);color:#8b918b}
+footer{display:flex;justify-content:space-between;padding:14px 20px;border-top:1px solid var(--line);color:#8b918b;background:var(--ink);color:#9aa39c}
+</style></head><body>
+<div class="wrap">
+<nav><div class="mark"><b>BUMI KALA <span>CHARTA</span></b><span class="mono" style="color:#8b918b">geospatial community</span></div>
+<ul><li><a href="#">Tentang</a></li><li><a href="#">Proyek</a></li><li><a href="#">Pelatihan</a></li><li><a href="#">Diskusi</a></li><li><a href="#">Kontak</a></li></ul>
+<a href="#" class="navcta">Gabung</a></nav>
+<div class="hero"><div class="contour"></div>
+<div class="heroL">
+<div class="tick"><i data-lucide="crosshair"></i><span class="mono">Geodesi · Geomatika · Survei Terestris</span></div>
+<h1>Memetakan ruang, <em>membangun</em> komunitas.</h1>
+<p class="sub">Bumi Kala Charta adalah komunitas dan konsultan geospasial: pengukuran presisi, pemetaan topografi, dan ruang belajar terbuka bagi praktisi geodesi di Indonesia.</p>
+<div class="btns"><a href="#" class="btn"><i data-lucide="map"></i>Lihat proyek</a><a href="#" class="btn alt"><i data-lucide="graduation-cap"></i>Jadwal pelatihan</a></div>
+</div>
+<div class="heroR">
+<div class="coord mono"><span>−6.9175, 107.6191</span><span>WGS 84 / UTM 48S</span></div>
+<div class="readout">
+<div class="mono" style="color:#8b918b;margin-bottom:8px">Proyek aktif</div>
+<div class="row"><b>Topografi Waduk Jatigede</b><span>1:1.000</span></div>
+<div class="row"><b>GNSS CORS Kab. Sleman</b><span>±8 mm</span></div>
+<div class="row"><b>LiDAR Koridor Tol Cisumdawu</b><span>12 km²</span></div>
+<div class="row"><b>Batas Desa Partisipatif</b><span class="badge">survei</span></div>
+<div class="row"><b>Peta Rawan Longsor Garut</b><span>1:25.000</span></div>
+</div>
+<div class="coord mono" style="border-top:1px solid var(--line);border-bottom:0"><span>Datum vertikal</span><span>EGM2008</span></div>
+</div></div>
+<div class="stats">
+<div class="stat"><b>48</b><span class="mono">Proyek selesai</span></div>
+<div class="stat"><b>1.204</b><span class="mono">Anggota komunitas</span></div>
+<div class="stat"><b>26</b><span class="mono">Kelas pelatihan</span></div>
+<div class="stat"><b>±0,8 cm</b><span class="mono">Akurasi horizontal</span></div>
+</div>
+<div class="secthead"><h2>Tiga lini kerja</h2><span class="mono" style="color:#8b918b">01 — 03</span></div>
+<div class="cards">
+<div class="card"><span class="mono no">01</span><i data-lucide="satellite"></i><h3>Proyek Geospasial</h3><p>Survei GNSS, pemetaan topografi, batimetri, dan pemodelan terrain untuk instansi maupun swasta.</p><div class="meta mono"><span>18 aktif</span><span>·</span><span>9 provinsi</span></div></div>
+<div class="card"><span class="mono no">02</span><i data-lucide="graduation-cap"></i><h3>Pelatihan &amp; Sertifikasi</h3><p>Kelas QGIS, pengolahan data GNSS, dan fotogrametri drone — dari dasar sampai tingkat lanjut.</p><div class="meta mono"><span>26 kelas</span><span>·</span><span>daring &amp; tatap muka</span></div></div>
+<div class="card"><span class="mono no">03</span><i data-lucide="messages-square"></i><h3>Diskusi Komunitas</h3><p>Forum bulanan, bedah studi kasus, dan arsip catatan teknis yang terbuka untuk semua anggota.</p><div class="meta mono"><span>bulanan</span><span>·</span><span>gratis</span></div></div>
+</div>
+<footer><span class="mono">© 2026 Bumi Kala Charta</span><span class="mono">Bandung · Indonesia</span></footer>
+</div>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script><script>lucide.createIcons()</script>
+</body></html>

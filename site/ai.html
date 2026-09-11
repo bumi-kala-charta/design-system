@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pakai dengan AI — BKC Design System V1</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="site.css"><script src="embed.js" defer></script>
+</head><body>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="index.html"><img src="../assets/logo-emblem.png" alt=""><span><b>BUMI KALA CHARTA</b><em>Design System · V1</em></span></a>
+<nav>
+<div class="grp">Mulai</div>
+<a href="index.html">Ikhtisar</a>
+<a href="start.html">Cara pakai</a>
+<a href="ai.html" aria-current="page">Pakai dengan AI</a>
+<div class="grp">Fondasi</div>
+<a href="foundations.html">Warna, tipografi, spacing</a>
+<a href="brand.html">Brand &amp; pola</a>
+<div class="grp">Bangun</div>
+<a href="components.html">Komponen</a>
+<a href="templates.html">Template &amp; kit</a>
+</nav>
+<div class="side-foot">v1.0 · September 2026</div>
+</aside>
+<main>
+<p class="eyebrow">Mulai</p>
+<h1>Pakai dengan AI</h1>
+<p class="lead">Sistem ini ditulis supaya bisa dibaca mesin. Dua file adalah pintu masuknya: <code>SKILL.md</code> untuk memuat sistem sebagai skill, dan <code>readme.md</code> sebagai konteks lengkap.</p>
+
+<h2>Dua file yang menjadi pintu masuk</h2>
+<table>
+<thead><tr><th>File</th><th>Fungsi</th></tr></thead>
+<tbody>
+<tr><td>SKILL.md</td><td>Ringkas, ±120 baris. Berisi lima aturan yang tidak bisa ditawar, peta folder, cara memuat token dan komponen, dan penjelasan pola kontur. Ini yang dibaca AI lebih dulu.</td></tr>
+<tr><td>readme.md</td><td>Dokumentasi penuh: konteks brand, sumber, fundamental konten, fondasi visual, ikonografi, dan celah yang masih terbuka. Dibaca saat AI perlu keputusan yang lebih detail.</td></tr>
+</tbody>
+</table>
+<div class="note"><p>Urutannya penting: <code>SKILL.md</code> sengaja pendek supaya muat di konteks awal, lalu menunjuk ke <code>readme.md</code> untuk detailnya. Jangan menggabungkan keduanya.</p></div>
+
+<h2>Claude Code / Claude Desktop</h2>
+<p>Taruh isi repositori ini sebagai satu skill. Struktur minimumnya:</p>
+<pre><code>.claude/skills/bumi-kala-charta-design/
+  SKILL.md          ← frontmatter name + description sudah siap
+  readme.md
+  styles.css
+  tokens/ components/ guidelines/ slides/ social/ templates/ assets/</code></pre>
+<p>Setelah itu cukup panggil dengan bahasa biasa — skill-nya akan terpicu sendiri:</p>
+<pre><code>Buatkan deck 8 slide untuk presentasi hasil survei topografi
+ke klien pemerintah daerah, pakai design system BKC.</code></pre>
+
+<h2>ChatGPT, Gemini, atau AI lain</h2>
+<p>Yang tidak punya mekanisme skill tetap bisa dipakai — beri dua file itu sebagai lampiran, lalu buka dengan instruksi ini:</p>
+<pre><code>Kamu bekerja dengan Bumi Kala Charta Design System v1.
+Baca SKILL.md lalu readme.md sebelum membuat apa pun.
+Patuhi lima aturan di bagian "Non-negotiables" tanpa pengecualian.
+Keluarkan HTML statis yang menautkan styles.css, dan hanya pakai
+token CSS yang sudah ada — jangan pernah menulis nilai hex mentah.</code></pre>
+
+<h2>Cursor, Windsurf, Copilot</h2>
+<p>Untuk editor berbasis aturan, tunjuk file yang sama dari file konfigurasi aturannya:</p>
+<pre><code># .cursor/rules atau AGENTS.md
+Semua UI di repo ini memakai Bumi Kala Charta Design System.
+Rujukan: ./design-system/SKILL.md dan ./design-system/readme.md
+Aturan keras: hanya token dari tokens/, tidak ada hex mentah,
+copy Bahasa Indonesia, oranye hanya untuk satu aksi per layar.</code></pre>
+
+<h2>Lima aturan yang dipegang AI</h2>
+<p>Ini isi bagian <em>Non-negotiables</em> di <code>SKILL.md</code> — sengaja ditaruh paling atas supaya tidak terlewat, dan ditulis sebagai larangan, bukan saran.</p>
+<ol>
+<li><strong>Bahasa Indonesia lebih dulu.</strong> "kami" untuk BKC, "kamu" di Instagram, formal di kanal lain, tidak pernah "Anda".</li>
+<li><strong>Hijau memimpin, oranye menunjuk.</strong> Satu aksi oranye per permukaan; bukan latar, bukan status terpilih, bukan gradien.</li>
+<li><strong>Angka pakai mono dan format Indonesia.</strong> <code>1.204</code>, <code>±0,8 cm</code>, <code>1:1.000</code> — selalu dengan satuan dan sistem referensi.</li>
+<li><strong>Jangan mengarang orang.</strong> Tidak ada nama, kutipan, atau testimoni fiktif — pakai jabatan, nama tim, atau placeholder berlabel.</li>
+<li><strong>Belum ada fotografi.</strong> Semua slot foto adalah placeholder berlabel; jangan diisi stock atau gambar hasil generate.</li>
+</ol>
+<div class="note warn"><p>Aturan keempat adalah yang paling sering dilanggar model. Kalau sebuah layar butuh nama orang, jawaban yang benar adalah jabatan atau <code>Nama pengurus — belum diisi</code>, bukan nama yang terdengar masuk akal.</p></div>
+
+<h2>Yang paling sering salah: pola kontur</h2>
+<p>Model cenderung membuat ulang pola kontur dengan <code>repeating-radial-gradient</code> — hasilnya cincin elips berjarak sama, bukan kontur. <code>SKILL.md</code> menyebut ini secara eksplisit sebagai larangan dan mengarahkan ke plate yang sudah ada.</p>
+<pre><code>&lt;!-- benar: plate yang sudah di-generate --&gt;
+&lt;span class="bkc-contour" data-pattern-tone="light"&gt;&lt;/span&gt;
+
+/* salah: bukan kontur, hanya garis melengkung bertumpuk */
+background:repeating-radial-gradient(circle, transparent 0 40px, #fff 40px 42px);</code></pre>
+<p>Penjelasan lengkap beserta tabel atributnya ada di <a href="brand.html">Brand &amp; pola</a>.</p>
+
+<h2>Contoh prompt yang bekerja baik</h2>
+<pre><code>Buat satu frame Instagram 1080×1350 untuk mengumumkan kelas
+"Pengolahan Data GNSS dengan RTKLIB", 28 September, daring.
+Pakai layout ig-event sebagai acuan. Nada santai, pakai "kamu".</code></pre>
+<pre><code>Tambahkan layar "Arsip Data" ke ui_kits/website — tabel dataset
+dengan kolom nama, format, sistem referensi, tanggal unggah,
+dan ukuran. Pakai komponen yang sudah ada, jangan bikin gaya baru.</code></pre>
+<pre><code>Audit file ini terhadap design system BKC. Sebutkan setiap nilai
+mentah yang seharusnya token, dan setiap pemakaian oranye
+yang melanggar aturan aksen tunggal.</code></pre>
+
+<h2>Memeriksa hasil AI</h2>
+<p>Empat pertanyaan yang cepat menangkap sebagian besar penyimpangan:</p>
+<ul>
+<li>Ada nilai hex mentah di file? Seharusnya token.</li>
+<li>Ada lebih dari satu elemen oranye di satu layar?</li>
+<li>Angka pengukuran memakai IBM Plex Mono dan format Indonesia?</li>
+<li>Ada nama orang yang tidak kamu kenal? Itu karangan — hapus.</li>
+</ul>
+</main>
+</div>
+</body></html>

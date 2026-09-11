@@ -1,0 +1,86 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><title>BKC — Warm &amp; Community-First</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--g:#358C67;--g2:#0D8C23;--o:#EA9012;--paper:#EDECE9;--ink:#1B221E;--soft:#F6F5F2}
+body{font-family:'IBM Plex Sans',sans-serif;background:#fff;color:var(--ink);width:1280px;-webkit-font-smoothing:antialiased}
+a{color:var(--g);text-decoration:none}a:hover{color:var(--g2)}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+nav{display:flex;align-items:center;justify-content:space-between;padding:22px 56px}
+.mark b{font-weight:700;font-size:15px;letter-spacing:.16em}
+.mark b span{color:var(--g)}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px}
+nav a{color:#4a524c}nav a:hover{color:var(--g)}
+.navcta{background:var(--g);color:#fff !important;padding:10px 20px;border-radius:999px;font-size:14px;font-weight:500}
+.navcta:hover{background:var(--g2)}
+.hero{padding:34px 56px 0;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--paper);color:#41493f;padding:7px 14px;border-radius:999px;margin-bottom:22px}
+.pill i{width:14px;height:14px;color:var(--g)}
+h1{font-size:56px;line-height:1.06;letter-spacing:-.03em;font-weight:600;text-wrap:pretty}
+h1 span{color:var(--g)}
+.sub{margin-top:22px;font-size:17px;line-height:1.65;color:#5a625c;max-width:30em}
+.btns{display:flex;gap:12px;margin-top:32px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--ink);color:#fff;padding:14px 24px;border-radius:999px;font-size:15px;font-weight:500}
+.btn:hover{background:var(--g)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #d8d6d0}
+.btn.ghost:hover{background:var(--soft);color:var(--ink)}
+.btn i{width:17px;height:17px}
+.faces{display:flex;align-items:center;gap:12px;margin-top:34px}
+.stack{display:flex}
+.stack div{width:34px;height:34px;border-radius:999px;border:2px solid #fff;margin-left:-10px;background:var(--paper);display:grid;place-items:center;color:#8d938b;font-size:9px}
+.stack div:first-child{margin:0}
+.faces p{font-size:13px;color:#6b726b}
+.photo{position:relative;height:420px;border-radius:24px;background:var(--paper);overflow:hidden;display:grid;place-items:center}
+.photo .ph{text-align:center;color:#9aa096}
+.photo .ph i{width:30px;height:30px;stroke-width:1.4}
+.photo .ph p{font-size:12px;margin-top:8px}
+.floatcard{position:absolute;left:24px;bottom:24px;right:24px;background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 12px 32px rgba(27,34,30,.12);display:flex;align-items:center;gap:14px}
+.floatcard .ic{width:40px;height:40px;border-radius:12px;background:rgba(234,144,18,.12);display:grid;place-items:center}
+.floatcard .ic i{width:19px;height:19px;color:var(--o)}
+.floatcard b{font-size:14px;display:block}
+.floatcard p{font-size:12px;color:#767d76;margin-top:2px}
+.band{margin:64px 56px 0;background:var(--soft);border-radius:28px;padding:36px 40px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.stat b{font-size:38px;font-weight:600;letter-spacing:-.02em;display:block}
+.stat span{color:#6b726b;font-size:14px;margin-top:4px;display:block}
+.sect{padding:58px 56px 30px}
+.sect h2{font-size:30px;letter-spacing:-.02em;font-weight:600}
+.sect p.lead{margin-top:10px;color:#6b726b;font-size:15px;max-width:34em}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:0 56px 56px}
+.card{border:1px solid #eae8e3;border-radius:20px;padding:24px;transition:box-shadow .18s,transform .18s}
+.card:hover{box-shadow:0 14px 30px rgba(27,34,30,.09);transform:translateY(-2px)}
+.card .ic{width:44px;height:44px;border-radius:14px;background:rgba(53,140,103,.1);display:grid;place-items:center;margin-bottom:18px}
+.card .ic i{width:21px;height:21px;color:var(--g);stroke-width:1.6}
+.card h3{font-size:18px;font-weight:600}
+.card p{font-size:14px;line-height:1.6;color:#6b726b;margin-top:8px}
+.card a{display:inline-flex;gap:6px;align-items:center;font-size:14px;font-weight:500;margin-top:16px}
+.card a i{width:15px;height:15px}
+footer{background:var(--ink);color:#a6aea6;padding:22px 56px;display:flex;justify-content:space-between}
+</style></head><body>
+<nav><div class="mark"><b>BUMI KALA <span>CHARTA</span></b></div>
+<ul><li><a href="#">Tentang</a></li><li><a href="#">Proyek</a></li><li><a href="#">Pelatihan</a></li><li><a href="#">Diskusi</a></li></ul>
+<a href="#" class="navcta">Gabung komunitas</a></nav>
+<div class="hero"><div>
+<span class="pill"><i data-lucide="users"></i><span class="mono">Komunitas geospasial Indonesia</span></span>
+<h1>Belajar, memetakan, dan <span>tumbuh bersama.</span></h1>
+<p class="sub">Ruang terbuka bagi mahasiswa dan praktisi geodesi–geomatika untuk berbagi ilmu, mengerjakan proyek nyata, dan saling menemukan.</p>
+<div class="btns"><a href="#" class="btn"><i data-lucide="user-plus"></i>Jadi anggota</a><a href="#" class="btn ghost"><i data-lucide="calendar"></i>Agenda terdekat</a></div>
+<div class="faces"><div class="stack"><div>FS</div><div>AR</div><div>DW</div><div>NR</div><div>+</div></div><p>1.204 anggota dari 34 kampus &amp; 62 instansi</p></div>
+</div>
+<div class="photo"><div class="ph"><i data-lucide="image"></i><p>Foto kegiatan lapangan — pengukuran GNSS bersama anggota</p></div>
+<div class="floatcard"><div class="ic"><i data-lucide="calendar-days"></i></div><div><b>Kelas Fotogrametri Drone — Batch 7</b><p>Sabtu, 19 September · Bandung &amp; daring · 12 kursi tersisa</p></div></div>
+</div></div>
+<div class="band">
+<div class="stat"><b>1.204</b><span>Anggota aktif</span></div>
+<div class="stat"><b>48</b><span>Proyek dikerjakan bersama</span></div>
+<div class="stat"><b>26</b><span>Kelas &amp; pelatihan</span></div>
+</div>
+<div class="sect"><h2>Apa yang kami lakukan</h2><p class="lead">Tiga hal, dikerjakan dengan orang-orang yang benar-benar peduli pada peta.</p></div>
+<div class="cards">
+<div class="card"><div class="ic"><i data-lucide="map"></i></div><h3>Proyek Geospasial</h3><p>Survei dan pemetaan bersama tim lintas kampus — pengalaman lapangan sebelum lulus.</p><a href="#">Lihat proyek <i data-lucide="arrow-right"></i></a></div>
+<div class="card"><div class="ic"><i data-lucide="graduation-cap"></i></div><h3>Pelatihan</h3><p>QGIS, pengolahan GNSS, dan fotogrametri. Materi arsip tetap bisa diakses anggota.</p><a href="#">Lihat jadwal <i data-lucide="arrow-right"></i></a></div>
+<div class="card"><div class="ic"><i data-lucide="messages-square"></i></div><h3>Diskusi</h3><p>Ngobrol santai tiap bulan: studi kasus, cerita proyek, dan tanya jawab tanpa sungkan.</p><a href="#">Ikut diskusi <i data-lucide="arrow-right"></i></a></div>
+</div>
+<footer><span>© 2026 Bumi Kala Charta</span><span>Bandung · Indonesia</span></footer>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script><script>lucide.createIcons()</script>
+</body></html>

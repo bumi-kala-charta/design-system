@@ -1,0 +1,17 @@
+<!-- @dsCard group="Brand" viewport="700x480" name="Contour pattern" subtitle="Primary motif — traced contour geometry, shown 1:1" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="../styles.css">
+<style>body{padding:18px 20px;background:var(--surface-page)}.strip{position:relative;height:78px;border-radius:var(--radius-md);overflow:hidden;display:flex;align-items:flex-end;padding:8px 10px}.lbl{position:relative;z-index:1;font-family:var(--font-data);font-size:9px;letter-spacing:.12em;text-transform:uppercase}.stack{display:grid;gap:8px}.chips{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}.chip{position:relative;height:56px;border-radius:var(--radius-md);overflow:hidden}.k{font-family:var(--font-data);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);margin-top:10px}</style>
+</head><body>
+<div class="stack">
+<div class="strip" style="background:var(--surface-brand)"><span class="bkc-contour"></span><span class="lbl" style="color:rgba(255,255,255,.8)">Default · 7 intervals · 1200px tile — the standard surface</span></div>
+<div class="strip" style="background:var(--surface-brand)"><span class="bkc-contour" data-pattern-density="loose"></span><span class="lbl" style="color:rgba(255,255,255,.8)">Loose · 5 intervals · 1700px — full-bleed bands</span></div>
+<div class="strip" style="background:var(--bkc-paper)"><span class="bkc-contour" data-pattern-tone="light" data-pattern-density="dense"></span><span class="lbl" style="color:var(--text-subtle)">Dense · 12 intervals · 620px — small surfaces that want texture</span></div>
+<div class="strip" style="background:var(--surface-brand)"><span class="bkc-contour bkc-contour--ridge"></span><span class="lbl" style="color:rgba(255,255,255,.8)">Summit · composed 16:9 hero terrain, covers the frame</span></div>
+</div>
+<div class="chips">
+<div class="chip" style="background:var(--surface-brand)"><span class="bkc-contour" data-pattern-density="dense"></span></div>
+<div class="chip" style="background:var(--bkc-paper)"><span class="bkc-contour" data-pattern-tone="light" data-pattern-density="dense"></span></div>
+<div class="chip" style="background:var(--surface-accent)"><span class="bkc-contour" data-pattern-tone="accent" data-pattern-density="dense"></span></div>
+<div class="chip" style="background:var(--surface-dark)"><span class="bkc-contour" data-pattern-tone="dark" data-pattern-density="dense"></span></div>
+</div>
+<div class="k">Tones: on brand · on paper · on orange · on ink · plates are masks — recolour with --c, never edit the SVG</div></body></html>

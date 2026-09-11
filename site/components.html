@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Komponen — BKC Design System V1</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="site.css"><script src="embed.js" defer></script>
+</head><body>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="index.html"><img src="../assets/logo-emblem.png" alt=""><span><b>BUMI KALA CHARTA</b><em>Design System · V1</em></span></a>
+<nav>
+<div class="grp">Mulai</div>
+<a href="index.html">Ikhtisar</a>
+<a href="start.html">Cara pakai</a>
+<a href="ai.html">Pakai dengan AI</a>
+<div class="grp">Fondasi</div>
+<a href="foundations.html">Warna, tipografi, spacing</a>
+<a href="brand.html">Brand &amp; pola</a>
+<div class="grp">Bangun</div>
+<a href="components.html" aria-current="page">Komponen</a>
+<a href="templates.html">Template &amp; kit</a>
+</nav>
+<div class="side-foot">v1.0 · September 2026</div>
+</aside>
+<main>
+<p class="eyebrow">Bangun</p>
+<h1>Komponen</h1>
+<p class="lead">23 komponen React dalam enam grup. Setiap komponen punya <code>.jsx</code>, deklarasi tipe <code>.d.ts</code>, dan tampil di kartu spesimen grupnya.</p>
+<pre><code>&lt;script src="_ds_bundle.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  const BKC = window.BumiKalaChartaDesignSystem_5e0b40;
+  const { Button, Card, Input, NavBar, EventCard } = BKC;
+&lt;/script&gt;</code></pre>
+
+<h2>Core</h2>
+<p>Tombol pill, icon button, badge, tag, stat, dan section heading — blok dasar yang muncul di hampir setiap layar.</p>
+<ds-embed src="../components/core/core.card.html" w="700" h="300" label="components/core"></ds-embed>
+<table>
+<thead><tr><th>Komponen</th><th>Untuk apa</th></tr></thead>
+<tbody>
+<tr><td>Button</td><td>Aksi utama dan sekunder. Bentuk pill, tinta → hijau saat hover.</td></tr>
+<tr><td>IconButton</td><td>Aksi tanpa label — toolbar, kontrol peta, tutup dialog.</td></tr>
+<tr><td>Badge</td><td>Status ringkas: aktif, selesai, menunggu verifikasi.</td></tr>
+<tr><td>Tag</td><td>Label kategori atau kata kunci yang bisa dihapus.</td></tr>
+<tr><td>Stat</td><td>Satu angka terukur dengan satuan dan keterangan, angka selalu mono.</td></tr>
+<tr><td>Card</td><td>Wadah dasar: radius 20px, border saat diam, bayangan saat hover.</td></tr>
+<tr><td>SectionHeading</td><td>Eyebrow mono + judul + deskripsi opsional untuk membuka satu seksi.</td></tr>
+</tbody>
+</table>
+
+<h2>Brand</h2>
+<p>Pembawa identitas: lockup logo, dua motif geospasial, dan pembaca koordinat.</p>
+<ds-embed src="../components/brand/brand.card.html" w="700" h="340" label="components/brand"></ds-embed>
+<table>
+<thead><tr><th>Komponen</th><th>Untuk apa</th></tr></thead>
+<tbody>
+<tr><td>Logo</td><td>Empat lockup resmi lewat satu prop, termasuk versi on-brand.</td></tr>
+<tr><td>ContourField</td><td>Motif kontur atau orbit sebagai lapisan latar — prop <code>motif</code>, <code>tone</code>, <code>density</code>.</td></tr>
+<tr><td>CoordinateReadout</td><td>Menampilkan lintang/bujur dengan datum dan sistem referensi, dalam mono.</td></tr>
+<tr><td>Icon</td><td>Pembungkus ikon Lucide dengan ukuran dan ketebalan yang sudah distandarkan.</td></tr>
+</tbody>
+</table>
+<div class="note"><p>Belum ada icon set khusus di brand guideline, jadi V1 memakai <a href="https://lucide.dev" target="_blank" rel="noopener">Lucide</a> lewat CDN dengan ketebalan garis yang diseragamkan. Kalau nanti tim menggambar set sendiri, hanya komponen <code>Icon</code> yang perlu diganti.</p></div>
+
+<h2>Navigation</h2>
+<p>Header situs dan tab strip. Keduanya menandai halaman aktif dengan hijau, bukan dengan garis bawah tebal.</p>
+<ds-embed src="../components/navigation/navigation.card.html" w="700" h="260" label="components/navigation"></ds-embed>
+
+<h2>Forms</h2>
+<p>Input, select, checkbox, radio, dan switch — semuanya dengan ring fokus hijau dan target sentuh minimal 44px.</p>
+<ds-embed src="../components/forms/forms.card.html" w="700" h="340" label="components/forms"></ds-embed>
+
+<h2>Feedback</h2>
+<p>Dialog, toast, dan tooltip. Overlay memakai tinta hangat dengan transparansi, bukan hitam.</p>
+<ds-embed src="../components/feedback/feedback.card.html" w="700" h="300" label="components/feedback"></ds-embed>
+
+<h2>Patterns</h2>
+<p>Komposisi tingkat lebih tinggi yang menggabungkan beberapa komponen core untuk kebutuhan berulang di produk BKC.</p>
+<ds-embed src="../components/patterns/patterns.card.html" w="700" h="360" label="components/patterns"></ds-embed>
+<table>
+<thead><tr><th>Komponen</th><th>Untuk apa</th></tr></thead>
+<tbody>
+<tr><td>EventCard</td><td>Satu kelas atau kegiatan: tanggal, lokasi, kuota, dan aksi daftar.</td></tr>
+<tr><td>AvatarStack</td><td>Peserta atau kontributor yang bertumpuk, dengan sisa jumlah.</td></tr>
+</tbody>
+</table>
+
+<h2>Membuat komponen baru</h2>
+<p>Tiga file, tanpa pengecualian:</p>
+<ul>
+<li><code>components/&lt;grup&gt;/Nama.jsx</code> — implementasinya, hanya memakai token.</li>
+<li><code>components/&lt;grup&gt;/Nama.d.ts</code> — deklarasi prop, ini yang membuatnya terdaftar di sistem.</li>
+<li>Satu contoh di <code>&lt;grup&gt;.card.html</code> pada folder yang sama, supaya ikut terlihat di dokumentasi.</li>
+</ul>
+</main>
+</div>
+</body></html>

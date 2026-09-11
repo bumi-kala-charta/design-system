@@ -1,0 +1,93 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cara pakai — BKC Design System V1</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="site.css"><script src="embed.js" defer></script>
+</head><body>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="index.html"><img src="../assets/logo-emblem.png" alt=""><span><b>BUMI KALA CHARTA</b><em>Design System · V1</em></span></a>
+<nav>
+<div class="grp">Mulai</div>
+<a href="index.html">Ikhtisar</a>
+<a href="start.html" aria-current="page">Cara pakai</a>
+<a href="ai.html">Pakai dengan AI</a>
+<div class="grp">Fondasi</div>
+<a href="foundations.html">Warna, tipografi, spacing</a>
+<a href="brand.html">Brand &amp; pola</a>
+<div class="grp">Bangun</div>
+<a href="components.html">Komponen</a>
+<a href="templates.html">Template &amp; kit</a>
+</nav>
+<div class="side-foot">v1.0 · September 2026</div>
+</aside>
+<main>
+<p class="eyebrow">Mulai</p>
+<h1>Cara pakai</h1>
+<p class="lead">Tiga cara memakai sistem ini, tergantung apa yang sedang kamu buat.</p>
+
+<h2>1 — Materi sekali pakai (slide, poster, feed IG)</h2>
+<p>Duplikat halaman contoh terdekat, lalu ganti isinya. Jangan mulai dari file kosong.</p>
+<pre><code>cp slides/two-column.html slides/rapat-februari.html
+# lalu edit teksnya saja — struktur, warna, dan spacing sudah benar</code></pre>
+<p>Daftar lengkap halaman contoh ada di <a href="templates.html">Template &amp; kit</a>.</p>
+
+<h2>2 — Halaman atau app baru</h2>
+<p>Cukup satu tautan stylesheet. Semua token, reset, font, dan kelas pola langsung tersedia.</p>
+<pre><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></pre>
+<p>Untuk komponen React, muat bundel-nya lalu ambil dari namespace global:</p>
+<pre><code>&lt;script src="_ds_bundle.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  const { Button, Card, NavBar, EventCard } = window.BumiKalaChartaDesignSystem_5e0b40;
+&lt;/script&gt;</code></pre>
+<div class="note"><p>Nama namespace panjang karena dibuat otomatis. Simpan sekali di variabel (<code>const BKC = window.BumiKalaChartaDesignSystem_5e0b40</code>) daripada mengulangnya.</p></div>
+
+<h3>Pakai token, bukan angka</h3>
+<pre><code>/* benar */
+.panel{background:var(--surface-card);border-radius:var(--radius-card);
+  padding:var(--space-6);box-shadow:var(--shadow-card)}
+
+/* salah — nilai mentah tidak ikut berubah saat sistem diperbarui */
+.panel{background:#fff;border-radius:20px;padding:24px}</code></pre>
+
+<h2>3 — Project baru yang mengikuti sistem</h2>
+<p>Dua folder template siap dicopy. Masing-masing punya <code>ds-base.js</code> — satu baris di dalamnya menentukan lokasi design system-nya:</p>
+<pre><code>templates/slide-deck/          → SlideDeck.dc.html + ds-base.js
+templates/instagram-carousel/  → InstagramCarousel.dc.html + ds-base.js</code></pre>
+<p>Copy foldernya, lalu sesuaikan <code>const base</code> di <code>ds-base.js</code> agar menunjuk ke lokasi design system relatif terhadap halaman itu.</p>
+
+<h2>Struktur folder</h2>
+<table>
+<thead><tr><th>Folder</th><th>Isi</th></tr></thead>
+<tbody>
+<tr><td>styles.css</td><td>Titik masuk. Meng-import seluruh file token — ini satu-satunya file yang perlu ditautkan.</td></tr>
+<tr><td>tokens/</td><td>colors · typography · spacing · shape · fonts · base · patterns · contour-plates. Semua perubahan sistem dimulai di sini.</td></tr>
+<tr><td>assets/</td><td>Logo &amp; maskot (PNG), 4 plate kontur (SVG), font IBM Plex (woff2).</td></tr>
+<tr><td>components/</td><td>23 komponen React, dikelompokkan: core · brand · navigation · forms · feedback · patterns.</td></tr>
+<tr><td>guidelines/</td><td>23 halaman spesimen — yang dirender di halaman Fondasi dan Brand.</td></tr>
+<tr><td>slides/ · social/</td><td>Halaman contoh siap-copy per layout (7 slide, 4 frame Instagram).</td></tr>
+<tr><td>ui_kits/</td><td>Dua kit layar penuh: website komunitas dan dashboard peta.</td></tr>
+<tr><td>templates/</td><td>Folder starter untuk project baru.</td></tr>
+<tr><td>site/</td><td>Situs dokumentasi ini.</td></tr>
+<tr><td>readme.md</td><td>Dokumentasi teknis lengkap — rujukan utama untuk developer dan AI.</td></tr>
+</tbody>
+</table>
+<div class="note warn"><p><code>_ds_bundle.js</code>, <code>_ds_manifest.json</code>, <code>_adherence.oxlintrc.json</code>, dan <code>support.js</code> dibuat otomatis. Jangan diedit tangan — akan tertimpa.</p></div>
+
+<h2>Aturan kontribusi</h2>
+<ul>
+<li><strong>Token dulu.</strong> Warna, ukuran, atau spacing baru masuk ke <code>tokens/</code> lebih dahulu, baru dipakai.</li>
+<li><strong>Satu nilai satu tempat.</strong> Kalau sebuah angka muncul di tiga halaman, jadikan token. Kalau hanya di satu halaman, jangan.</li>
+<li><strong>Komponen baru butuh tiga file:</strong> <code>Nama.jsx</code>, <code>Nama.d.ts</code>, dan satu spesimen di kartu grup terkait.</li>
+<li><strong>Plate kontur di-generate, bukan digambar.</strong> Jangan mengedit SVG-nya; regenerate supaya geometrinya tetap isoline yang benar.</li>
+<li><strong>Jangan menambah warna di luar palet.</strong> Kalau butuh nuansa baru, ambil dari skala hijau/oranye/netral yang sudah ada.</li>
+</ul>
+
+<h2>Menaruh di GitHub</h2>
+<p>Seluruh isi project ini bisa langsung di-push sebagai repositori statis. Untuk membuka situs dokumentasi ini lewat GitHub Pages, aktifkan Pages dari branch utama — <code>index.html</code> di root sudah mengarahkan ke <code>site/index.html</code>.</p>
+<pre><code>git init
+git add .
+git commit -m "BKC Design System v1.0"
+git remote add origin git@github.com:&lt;org&gt;/bkc-design-system.git
+git push -u origin main</code></pre>
+</main>
+</div>
+</body></html>

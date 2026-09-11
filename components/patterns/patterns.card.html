@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" viewport="700x360" name="Patterns" subtitle="Event listing, avatar stack, cards & section heading" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;background:var(--surface-page)}#root{display:flex;flex-direction:column;gap:20px}.grp{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.lbl{font-family:var(--font-data);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);width:100%}</style>
+</head><body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { EventCard, AvatarStack, Card, ContourField, SectionHeading, Button, IconButton, Icon } = window.BumiKalaChartaDesignSystem_5e0b40;
+function Demo(){return <>
+<EventCard day="19" month="SEP" tone="accent" title="Kelas Fotogrametri Drone — Batch 7" meta="09.00–16.00 · Bandung & daring · Mentor: Fikri S." format="Daring & tatap muka" seats="12 kursi tersisa" onClick={()=>{}}/>
+<EventCard day="04" month="OKT" title="Diskusi Bulanan: Residu GNSS" meta="19.30–21.00 · Daring" format="Gratis" seats="Penuh — daftar tunggu"/>
+<AvatarStack people={['FS','AR','DW','NR','MI','HP','YS']} caption="1.204 anggota dari 34 kampus & 62 instansi"/>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:12}}>
+<Card interactive><IconButton label="" variant="soft"><Icon name="map" size={20}/></IconButton><h3 style={{marginTop:14,fontSize:'var(--text-title-3)'}}>Proyek</h3><p style={{marginTop:6,fontSize:'var(--text-body-sm)',color:'var(--text-muted)'}}>Survei dan pemetaan bersama tim lintas kampus.</p></Card>
+<Card surface="muted"><IconButton label="" variant="soft-accent"><Icon name="graduation-cap" size={20}/></IconButton><h3 style={{marginTop:14,fontSize:'var(--text-title-3)'}}>Pelatihan</h3><p style={{marginTop:6,fontSize:'var(--text-body-sm)',color:'var(--text-muted)'}}>QGIS, GNSS, dan fotogrametri drone.</p></Card>
+<Card surface="brand" pattern={<ContourField/>}><h3 style={{marginTop:0,fontSize:'var(--text-title-3)',color:'#fff'}}>Diskusi</h3><p style={{marginTop:6,fontSize:'var(--text-body-sm)',color:'var(--text-on-dark)'}}>Forum bulanan, terbuka untuk semua anggota.</p></Card></div>
+<SectionHeading eyebrow="Tiga lini kerja" title="Apa yang kami lakukan" lead="Tiga hal, dikerjakan dengan orang-orang yang benar-benar peduli pada peta." action={<Button variant="secondary" size="sm">Semua layanan</Button>}/>
+</>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

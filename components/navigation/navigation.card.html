@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" viewport="700x260" name="Navigation" subtitle="Site header and tab strips" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<style>body{padding:24px;background:var(--surface-page)}#root{display:flex;flex-direction:column;gap:20px}.grp{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.lbl{font-family:var(--font-data);font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-subtle);width:100%}</style>
+</head><body><div id="root"></div>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.451.0/dist/umd/lucide.min.js"></script>
+<script src="../../_ds_bundle.js"></script>
+<script type="text/babel">
+const { NavBar, Tabs, Button } = window.BumiKalaChartaDesignSystem_5e0b40;
+function Demo(){const [t,setT]=React.useState('semua');return <>
+<div style={{border:'1px solid var(--border-subtle)',borderRadius:'var(--radius-lg)',overflow:'hidden'}}>
+<NavBar items={['Tentang','Proyek','Pelatihan','Diskusi']} active="Proyek" assetBase="../../assets" style={{padding:'14px 20px'}} action={<Button variant="brand" size="sm">Gabung</Button>}/></div>
+<div style={{border:'1px solid var(--border-subtle)',borderRadius:'var(--radius-lg)',overflow:'hidden',background:'var(--surface-brand)'}}>
+<NavBar tone="on-brand" items={['Tentang','Proyek','Pelatihan']} active="Tentang" assetBase="../../assets" style={{padding:'14px 20px'}} action={<Button variant="accent" size="sm">Gabung</Button>}/></div>
+<div><span className="lbl" style={{display:'block',marginBottom:10}}>Tabs — underline</span>
+<Tabs value={t} onChange={setT} items={[{value:'semua',label:'Semua',count:48},{value:'aktif',label:'Berjalan',count:18},{value:'arsip',label:'Arsip',count:30}]}/></div>
+<div><span className="lbl" style={{display:'block',marginBottom:10}}>Tabs — pill</span>
+<Tabs variant="pill" items={['Peta','Tabel','Metadata']} defaultValue="Peta" style={{width:'fit-content'}}/></div>
+</>}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+</script></body></html>

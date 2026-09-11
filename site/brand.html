@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brand &amp; pola — BKC Design System V1</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="site.css"><script src="embed.js" defer></script>
+</head><body>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="index.html"><img src="../assets/logo-emblem.png" alt=""><span><b>BUMI KALA CHARTA</b><em>Design System · V1</em></span></a>
+<nav>
+<div class="grp">Mulai</div>
+<a href="index.html">Ikhtisar</a>
+<a href="start.html">Cara pakai</a>
+<a href="ai.html">Pakai dengan AI</a>
+<div class="grp">Fondasi</div>
+<a href="foundations.html">Warna, tipografi, spacing</a>
+<a href="brand.html" aria-current="page">Brand &amp; pola</a>
+<div class="grp">Bangun</div>
+<a href="components.html">Komponen</a>
+<a href="templates.html">Template &amp; kit</a>
+</nav>
+<div class="side-foot">v1.0 · September 2026</div>
+</aside>
+<main>
+<p class="eyebrow">Fondasi</p>
+<h1>Brand &amp; pola</h1>
+<p class="lead">Logo, maskot, dan dua motif geospasial — beserta aturan yang membuatnya tetap terbaca di semua ukuran.</p>
+
+<h2>Logo</h2>
+<p>Empat lockup resmi: emblem saja, horizontal, vertikal, dan versi on-brand di atas hijau. Wordmark selalu kapital dengan tracking 0.16em, bobot 700 — satu-satunya tempat bobot 700 dipakai di seluruh sistem.</p>
+<ds-embed src="../guidelines/brand-logo.html" w="700" h="190" label="Logo lockups"></ds-embed>
+<ds-embed src="../guidelines/brand-strata.html" w="700" h="150" label="Emblem anatomy" note="Tiga strata: canopy green, stratum grey, subsurface ink"></ds-embed>
+<div class="rules">
+<div class="do"><h5>Lakukan</h5><ul><li>Beri ruang bebas minimal setinggi emblem di semua sisi.</li><li>Ukuran minimum emblem 24px; lockup horizontal 120px.</li><li>Di atas foto, pakai versi putih penuh.</li></ul></div>
+<div class="dont"><h5>Hindari</h5><ul><li>Meregangkan, memiringkan, atau memutar lockup.</li><li>Mengganti warna emblem di luar empat colourway.</li><li>Menaruh logo di atas area kontur yang rapat.</li></ul></div>
+</div>
+<div class="note warn"><p>Aset yang tersedia sekarang masih PNG hasil olahan. Untuk cetak, laser cutting, atau ukuran besar, minta master SVG lebih dulu.</p></div>
+
+<h2>Maskot tupai</h2>
+<p>Mark tupai boleh berdiri sendiri sebagai penanda ringan — di footer, di frame quote, sebagai ornamen kecil. Empat colourway disetujui: hijau, oranye, tinta, dan putih. Bukan ilustrasi bercerita; jangan diberi pose atau properti baru.</p>
+<ds-embed src="../guidelines/brand-mark.html" w="700" h="160" label="Squirrel mark" note="Empat colourway yang disetujui"></ds-embed>
+
+<h2>Pola kontur — motif utama</h2>
+<p>Ini <strong>geometri kontur sungguhan</strong>, bukan tumpukan garis melengkung: sebuah heightfield sintetis ditrace dengan marching squares, sehingga setiap garis adalah isoline. Akibatnya polanya berperilaku seperti lembar peta — loop tertutup bersarang, index contour dengan bobot ganda, dan jarak yang merapat di lereng terjal lalu melebar di tanah datar.</p>
+<p>Bacaan defaultnya sengaja berupa <strong>crop rapat</strong> dari terrain: garis melebar dengan banyak ruang kosong, satu atau dua landform per frame — bukan area luas yang penuh bukit.</p>
+<ds-embed src="../guidelines/brand-pattern-contour.html" w="700" h="480" label="Contour pattern" note="Ditampilkan 1:1 — default, loose, dense, summit"></ds-embed>
+<h3>Cara memakainya</h3>
+<pre><code>&lt;!-- satu elemen kosong di belakang konten --&gt;
+&lt;span class="bkc-contour"&gt;&lt;/span&gt;
+&lt;span class="bkc-contour" data-pattern-tone="light" data-pattern-density="loose"&gt;&lt;/span&gt;
+&lt;span class="bkc-contour bkc-contour--ridge"&gt;&lt;/span&gt;</code></pre>
+<table>
+<thead><tr><th>Atribut</th><th>Nilai &amp; fungsi</th></tr></thead>
+<tbody>
+<tr><td>data-pattern-tone</td><td><code>light</code> (di atas kertas) · <code>accent</code> (di atas oranye) · <code>dark</code> (di atas tinta). Kosongkan untuk di atas hijau.</td></tr>
+<tr><td>data-pattern-density</td><td><code>dense</code> — plate padat 12 interval, tile 620px, hanya untuk permukaan kecil yang butuh tekstur. <code>loose</code> — 5 interval, tile 1700px, untuk band full-bleed. Default: 7 interval, tile 1200px.</td></tr>
+<tr><td>--tile</td><td>Override ukuran tile per permukaan, misal <code>style="--tile:820px"</code>.</td></tr>
+<tr><td>--c</td><td>Override warna garis. Plate dipasang sebagai mask, jadi warna garis hanyalah background-color.</td></tr>
+<tr><td>.bkc-contour--ridge</td><td>Plate summit: hero terrain 16:9 yang dikomposisi (puncak dominan kiri-bawah). Selalu menutupi frame; mengabaikan <code>--tile</code>.</td></tr>
+</tbody>
+</table>
+<div class="rules">
+<div class="do"><h5>Lakukan</h5><ul><li>Selalu sebagai lapisan latar dengan alpha rendah.</li><li>Satu motif per permukaan.</li><li>Pakai <code>loose</code> kalau ada teks panjang di atasnya.</li></ul></div>
+<div class="dont"><h5>Hindari</h5><ul><li>Kontur sebagai grafis depan atau ikon.</li><li>Body text di atas plate <code>dense</code>.</li><li>Mengedit SVG plate langsung — di-generate, bukan digambar.</li></ul></div>
+</div>
+<p>Empat plate tersedia sebagai SVG di <code>assets/</code> untuk dipakai di Figma atau cetak:
+<a href="../assets/pattern-contour.svg" target="_blank" rel="noopener">default</a> ·
+<a href="../assets/pattern-contour-loose.svg" target="_blank" rel="noopener">loose</a> ·
+<a href="../assets/pattern-contour-dense.svg" target="_blank" rel="noopener">dense</a> ·
+<a href="../assets/pattern-contour-summit.svg" target="_blank" rel="noopener">summit</a>.</p>
+
+<h2>Motif orbit — motif kedua</h2>
+<p>Graticule lintang/bujur dengan dua busur orbit. Dipakai terbatas untuk momen hero dan penutup — pembatas seksi, slide penutup, frame closing Instagram. <strong>Kedua motif tidak pernah berbagi satu permukaan.</strong></p>
+<ds-embed src="../guidelines/brand-pattern-orbit.html" w="700" h="170" label="Orbit motif"></ds-embed>
+<pre><code>&lt;span class="bkc-orbit" data-pattern-tone="dark"&gt;
+  &lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;&lt;i&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+
+<h2>Fotografi</h2>
+<p>Hangat, di lokasi, tidak berpose — pengukuran di lapangan, alat di atas tripod, orang berdiskusi di papan tulis — dengan nuansa kertas dalam frame, bukan cast biru dingin. Tanpa stock, tanpa filter grain, tanpa hitam-putih.</p>
+<div class="note warn"><p>Belum ada foto yang dikirim. Semua slot gambar di slide, website, dan Instagram masih placeholder berlabel yang menyebutkan isi yang diharapkan.</p></div>
+</main>
+</div>
+</body></html>

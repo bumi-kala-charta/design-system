@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Template &amp; kit — BKC Design System V1</title>
+<link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="site.css"><script src="embed.js" defer></script>
+</head><body>
+<div class="shell">
+<aside class="side">
+<a class="brand" href="index.html"><img src="../assets/logo-emblem.png" alt=""><span><b>BUMI KALA CHARTA</b><em>Design System · V1</em></span></a>
+<nav>
+<div class="grp">Mulai</div>
+<a href="index.html">Ikhtisar</a>
+<a href="start.html">Cara pakai</a>
+<a href="ai.html">Pakai dengan AI</a>
+<div class="grp">Fondasi</div>
+<a href="foundations.html">Warna, tipografi, spacing</a>
+<a href="brand.html">Brand &amp; pola</a>
+<div class="grp">Bangun</div>
+<a href="components.html">Komponen</a>
+<a href="templates.html" aria-current="page">Template &amp; kit</a>
+</nav>
+<div class="side-foot">v1.0 · September 2026</div>
+</aside>
+<main>
+<p class="eyebrow">Bangun</p>
+<h1>Template &amp; kit</h1>
+<p class="lead">Halaman siap-copy untuk empat kanal. Cara tercepat membuat materi baru: duplikat yang paling dekat, ganti isinya.</p>
+
+<h2>Slide — 1280×720</h2>
+<p>Tujuh layout dengan ritme yang sudah diatur: pembuka full-bleed hijau, pembatas seksi tinta, halaman isi di atas kertas, dan penutup. Latar kontur hanya di pembuka, quote, dan penutup — halaman isi dibiarkan bersih.</p>
+<ds-embed src="../slides/title.html" w="1280" h="720" label="slides/title.html" note="Pembuka — hijau full-bleed, plate kontur"></ds-embed>
+<ds-embed src="../slides/section.html" w="1280" h="720" label="slides/section.html" note="Pembatas seksi — slab tinta, motif orbit, angka besar"></ds-embed>
+<ds-embed src="../slides/two-column.html" w="1280" h="720" label="slides/two-column.html" note="Teks kiri, slot gambar kanan"></ds-embed>
+<ds-embed src="../slides/stats.html" w="1280" h="720" label="slides/stats.html" note="Empat angka terukur di atas kertas"></ds-embed>
+<ds-embed src="../slides/table.html" w="1280" h="720" label="slides/table.html" note="Register proyek, angka mono"></ds-embed>
+<ds-embed src="../slides/quote.html" w="1280" h="720" label="slides/quote.html" note="Pernyataan, plate summit"></ds-embed>
+<ds-embed src="../slides/closing.html" w="1280" h="720" label="slides/closing.html" note="Kontak, motif orbit, aksi oranye"></ds-embed>
+<div class="note"><p>Untuk deck utuh yang bisa dinavigasi dan diekspor, pakai starter di <code>templates/slide-deck/</code> alih-alih menyusun halaman satu per satu.</p></div>
+
+<h2>Instagram — 1080×1350</h2>
+<p>Empat frame yang membentuk satu carousel: cover hijau, halaman isi di atas kertas, frame quote, dan penutup ajakan simpan. Frame oranye khusus pengumuman kelas. Nada bahasanya lebih santai di kanal ini — memakai "kamu".</p>
+<div class="grid g2">
+<ds-embed src="../social/ig-cover.html" w="1080" h="1350" label="social/ig-cover.html" note="Cover carousel"></ds-embed>
+<ds-embed src="../social/ig-content.html" w="1080" h="1350" label="social/ig-content.html" note="Halaman isi bernomor"></ds-embed>
+<ds-embed src="../social/ig-event.html" w="1080" h="1350" label="social/ig-event.html" note="Pengumuman kelas"></ds-embed>
+<ds-embed src="../social/ig-save.html" w="1080" h="1350" label="social/ig-save.html" note="Penutup — ajakan simpan"></ds-embed>
+</div>
+<p>Starter carousel lengkap ada di <code>templates/instagram-carousel/</code>.</p>
+
+<h2>Website komunitas — 1280 lebar</h2>
+<p>Empat layar yang bisa diklik: beranda, proyek, pelatihan, dan tentang, plus halaman diskusi. Dibangun dari komponen yang sama dengan yang ada di halaman Komponen — tidak ada gaya khusus di dalamnya.</p>
+<ds-embed src="../ui_kits/website/index.html" w="1280" h="760" label="ui_kits/website/index.html" note="Klik navigasinya untuk berpindah layar"></ds-embed>
+
+<h2>Dashboard peta &amp; proyek — 1440×820</h2>
+<p>Panel layer, kanvas peta, tabel proyek, dan panel metadata. Kanvas peta memakai plate kontur sebagai layer topografi yang bisa dinyalakan-matikan — bukan hiasan, tapi contoh bagaimana motifnya berperan fungsional.</p>
+<ds-embed src="../ui_kits/dashboard/index.html" w="1440" h="820" label="ui_kits/dashboard/index.html" note="Coba nyalakan layer kontur dan graticule"></ds-embed>
+
+<h2>Folder starter</h2>
+<table>
+<thead><tr><th>Folder</th><th>Isi</th></tr></thead>
+<tbody>
+<tr><td>templates/slide-deck/</td><td>Deck lengkap dengan lima layout, siap dicopy ke project presentasi baru.</td></tr>
+<tr><td>templates/instagram-carousel/</td><td>Carousel empat frame, siap dicopy untuk kampanye baru.</td></tr>
+</tbody>
+</table>
+<p>Masing-masing berisi <code>ds-base.js</code>. Setelah dicopy, sesuaikan satu baris <code>const base</code> di file itu agar menunjuk ke lokasi design system relatif terhadap halaman tersebut — sisanya jalan sendiri.</p>
+</main>
+</div>
+</body></html>
