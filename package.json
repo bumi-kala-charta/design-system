@@ -1,0 +1,15 @@
+{
+  "name": "bkc-ds",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bumi Kala Charta design system",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-bundle.mjs",
+    "check": "node scripts/build-bundle.mjs --check"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.26.0"
+  }
+}

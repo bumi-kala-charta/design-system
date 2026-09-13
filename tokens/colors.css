@@ -56,7 +56,7 @@
 
   /* ---- semantic: text ---- */
   --text-strong:var(--neutral-900);
-  --text-body:var(--neutral-700);
+  --text-default:var(--neutral-700);
   --text-muted:var(--neutral-600);
   --text-subtle:var(--neutral-500);
   --text-brand:var(--bkc-green);

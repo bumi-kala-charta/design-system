@@ -45,6 +45,10 @@ photographic slot in this system is an explicit labelled placeholder.
 Every component is `<Name>.jsx` + `<Name>.d.ts` + `<Name>.prompt.md`, with one `@dsCard` per
 directory. Read the `.prompt.md` for usage — it carries the rules, not just the signature.
 
+`_ds_bundle.js` is generated from `components/`, `site/embed.js`, and `ui_kits/` — never edit it by
+hand. After changing any of those sources, run `npm install` once, then `npm run build`.
+`npm run check` fails if the committed bundle is out of date.
+
 **`components/brand/`** — `Logo` · `Icon` · `ContourField` · `CoordinateReadout`
 **`components/core/`** — `Button` · `IconButton` · `Badge` · `Tag` · `Card` · `Stat` · `SectionHeading`
 **`components/forms/`** — `Input` · `Select` · `Checkbox` · `Radio` · `Switch`

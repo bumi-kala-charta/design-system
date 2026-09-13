@@ -12,7 +12,7 @@ function HomeScreen({ go, onJoin }) {
         <div>
           <span style={{ display: 'inline-flex', alignItems: 'center', gap: 'var(--space-2)', background: 'var(--bkc-paper)', padding: '7px 14px', borderRadius: 'var(--radius-pill)', marginBottom: 'var(--space-6)' }}>
             <Icon name="users" size={14} color="var(--bkc-green)" />
-            <span className="bkc-eyebrow" style={{ color: 'var(--text-body)' }}>Komunitas geospasial Indonesia</span>
+            <span className="bkc-eyebrow" style={{ color: 'var(--text-default)' }}>Komunitas geospasial Indonesia</span>
           </span>
           <h1 style={{ fontSize: 'var(--text-display-1)' }}>
             Belajar, memetakan, dan <span style={{ color: 'var(--bkc-green)' }}>tumbuh bersama.</span>

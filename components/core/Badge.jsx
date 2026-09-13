@@ -6,7 +6,7 @@ const bkcBadgeTones = {
   success: { background: 'var(--status-success-soft)', color: '#0A6B1B' },
   warning: { background: 'var(--status-warning-soft)', color: 'var(--orange-700)' },
   danger: { background: 'var(--status-danger-soft)', color: 'var(--status-danger)' },
-  neutral: { background: 'var(--neutral-150)', color: 'var(--text-body)' },
+  neutral: { background: 'var(--neutral-150)', color: 'var(--text-default)' },
   solid: { background: 'var(--bkc-orange)', color: 'var(--bkc-white)' },
   'on-dark': { background: 'rgba(255,255,255,.14)', color: 'var(--bkc-white)' },
 };

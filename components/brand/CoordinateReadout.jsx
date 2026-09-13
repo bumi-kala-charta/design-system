@@ -13,7 +13,7 @@ const bkcReadoutRow = {
    Use wherever the design should feel measured rather than marketed. */
 export function CoordinateReadout({ items = [], label, dense = false, tone = 'default', style, ...rest }) {
   const onDark = tone === 'on-dark';
-  const rowColor = onDark ? 'var(--text-on-dark)' : 'var(--text-body)';
+  const rowColor = onDark ? 'var(--text-on-dark)' : 'var(--text-default)';
   const keyColor = onDark ? 'var(--text-on-dark-muted)' : 'var(--text-subtle)';
   return (
     <div style={{ fontFamily: 'var(--font-data)', ...style }} {...rest}>

@@ -27,7 +27,7 @@ h2{font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.2;margin:6
 h2:first-of-type{margin-top:48px}
 h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin:34px 0 10px}
 p{font-size:15.5px;line-height:1.65;color:var(--text-muted);max-width:40em;margin:0 0 14px;text-wrap:pretty}
-.lead{font-size:19px;line-height:1.55;color:var(--text-body);max-width:34em}
+.lead{font-size:19px;line-height:1.55;color:var(--text-default);max-width:34em}
 strong{color:var(--text-strong);font-weight:600}
 ul,ol{font-size:15.5px;line-height:1.65;color:var(--text-muted);max-width:40em;padding-left:22px;margin:0 0 16px;list-style-position:outside}
 main ul,.rules ul{list-style-type:disc}
@@ -71,7 +71,7 @@ td{padding:11px 12px 11px 0;border-bottom:1px solid var(--border-subtle);color:v
 td:first-child{color:var(--text-strong);font-family:var(--font-data);font-size:13px;white-space:nowrap}
 /* callouts */
 .note{border-left:0;background:var(--surface-brand-soft);border-radius:var(--radius-md);padding:16px 18px;margin:0 0 20px}
-.note p{margin:0;color:var(--text-body);font-size:14.5px}
+.note p{margin:0;color:var(--text-default);font-size:14.5px}
 .note.warn{background:var(--surface-accent-soft)}
 .rules{display:grid;gap:12px;grid-template-columns:1fr 1fr;margin-bottom:20px}
 .rules div{background:var(--surface-card);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:15px 17px}

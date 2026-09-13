@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"BumiKalaChartaDesignSystem_5e0b40","components":[{"name":"ContourField","sourcePath":"components/brand/ContourField.jsx"},{"name":"CoordinateReadout","sourcePath":"components/brand/CoordinateReadout.jsx"},{"name":"Icon","sourcePath":"components/brand/Icon.jsx"},{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Stat","sourcePath":"components/core/Stat.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"AvatarStack","sourcePath":"components/patterns/AvatarStack.jsx"},{"name":"EventCard","sourcePath":"components/patterns/EventCard.jsx"}],"sourceHashes":{"components/brand/ContourField.jsx":"c139602fb48a","components/brand/CoordinateReadout.jsx":"5d63d6c85a30","components/brand/Icon.jsx":"0d3ae800e014","components/brand/Logo.jsx":"66902c03b20b","components/core/Badge.jsx":"0185a730df69","components/core/Button.jsx":"d3a89e324d56","components/core/Card.jsx":"4d91c5488894","components/core/IconButton.jsx":"dfe9dfdbcef5","components/core/SectionHeading.jsx":"0ea8e29f448d","components/core/Stat.jsx":"ee93c7abd90b","components/core/Tag.jsx":"31ed8ef61acb","components/feedback/Dialog.jsx":"5ab51a0279a2","components/feedback/Toast.jsx":"1f1c2e4c4ca1","components/feedback/Tooltip.jsx":"da633d2c1f86","components/forms/Checkbox.jsx":"4683ab88e958","components/forms/Input.jsx":"ef0ef6f01315","components/forms/Radio.jsx":"f29b167e1cbe","components/forms/Select.jsx":"0da49e9779dc","components/forms/Switch.jsx":"a44dd0ecf7c3","components/navigation/NavBar.jsx":"969507fa88e7","components/navigation/Tabs.jsx":"973c3f87af60","components/patterns/AvatarStack.jsx":"52c37e433aab","components/patterns/EventCard.jsx":"70429b29aca0","site/embed.js":"cecec1cb6a1b","ui_kits/dashboard/Chrome.jsx":"afd5aa1d21df","ui_kits/dashboard/Dashboard.jsx":"a1129a7e2e43","ui_kits/dashboard/InspectorPanel.jsx":"172eeb178aac","ui_kits/dashboard/LayerPanel.jsx":"e8ac020e2325","ui_kits/dashboard/MapCanvas.jsx":"5f2ea239bd5d","ui_kits/dashboard/ProjectTable.jsx":"cf4a4e48f8e8","ui_kits/website/AboutScreen.jsx":"2c9b5aae6206","ui_kits/website/App.jsx":"6162debd2481","ui_kits/website/DiscussionScreen.jsx":"5cadd42c1612","ui_kits/website/HomeScreen.jsx":"1f28888aed03","ui_kits/website/ProjectsScreen.jsx":"3eee8a4710ff","ui_kits/website/Shared.jsx":"95208a763c5f","ui_kits/website/TrainingScreen.jsx":"88cb5c4531dd"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"BumiKalaChartaDesignSystem_5e0b40","components":[{"name":"ContourField","sourcePath":"components/brand/ContourField.jsx"},{"name":"CoordinateReadout","sourcePath":"components/brand/CoordinateReadout.jsx"},{"name":"Icon","sourcePath":"components/brand/Icon.jsx"},{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Stat","sourcePath":"components/core/Stat.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"AvatarStack","sourcePath":"components/patterns/AvatarStack.jsx"},{"name":"EventCard","sourcePath":"components/patterns/EventCard.jsx"}],"sourceHashes":{"components/brand/ContourField.jsx":"c139602fb48a","components/brand/CoordinateReadout.jsx":"ce93c1d0049f","components/brand/Icon.jsx":"0d3ae800e014","components/brand/Logo.jsx":"66902c03b20b","components/core/Badge.jsx":"75546160f63a","components/core/Button.jsx":"d3a89e324d56","components/core/Card.jsx":"4d91c5488894","components/core/IconButton.jsx":"dfe9dfdbcef5","components/core/SectionHeading.jsx":"0ea8e29f448d","components/core/Stat.jsx":"ee93c7abd90b","components/core/Tag.jsx":"822796521da0","components/feedback/Dialog.jsx":"5ab51a0279a2","components/feedback/Toast.jsx":"1f1c2e4c4ca1","components/feedback/Tooltip.jsx":"da633d2c1f86","components/forms/Checkbox.jsx":"4683ab88e958","components/forms/Input.jsx":"ef0ef6f01315","components/forms/Radio.jsx":"f29b167e1cbe","components/forms/Select.jsx":"0da49e9779dc","components/forms/Switch.jsx":"a44dd0ecf7c3","components/navigation/NavBar.jsx":"bb6bfda74c7c","components/navigation/Tabs.jsx":"973c3f87af60","components/patterns/AvatarStack.jsx":"52c37e433aab","components/patterns/EventCard.jsx":"70429b29aca0","site/embed.js":"cecec1cb6a1b","ui_kits/dashboard/Chrome.jsx":"afd5aa1d21df","ui_kits/dashboard/Dashboard.jsx":"a1129a7e2e43","ui_kits/dashboard/InspectorPanel.jsx":"d564d82965b7","ui_kits/dashboard/LayerPanel.jsx":"e8ac020e2325","ui_kits/dashboard/MapCanvas.jsx":"5f2ea239bd5d","ui_kits/dashboard/ProjectTable.jsx":"b885755ea4d7","ui_kits/website/AboutScreen.jsx":"2c9b5aae6206","ui_kits/website/App.jsx":"6162debd2481","ui_kits/website/DiscussionScreen.jsx":"5cadd42c1612","ui_kits/website/HomeScreen.jsx":"ade77f429912","ui_kits/website/ProjectsScreen.jsx":"3eee8a4710ff","ui_kits/website/Shared.jsx":"c228a485dcd6","ui_kits/website/TrainingScreen.jsx":"88cb5c4531dd"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -73,7 +73,7 @@ function CoordinateReadout({
   ...rest
 }) {
   const onDark = tone === 'on-dark';
-  const rowColor = onDark ? 'var(--text-on-dark)' : 'var(--text-body)';
+  const rowColor = onDark ? 'var(--text-on-dark)' : 'var(--text-default)';
   const keyColor = onDark ? 'var(--text-on-dark-muted)' : 'var(--text-subtle)';
   return /*#__PURE__*/React.createElement("div", _extends({
     style: {
@@ -273,7 +273,7 @@ const bkcBadgeTones = {
   },
   neutral: {
     background: 'var(--neutral-150)',
-    color: 'var(--text-body)'
+    color: 'var(--text-default)'
   },
   solid: {
     background: 'var(--bkc-orange)',
@@ -772,7 +772,7 @@ function Tag({
       borderRadius: 'var(--radius-pill)',
       border: `1px solid ${selected ? 'var(--bkc-green)' : 'var(--border-subtle)'}`,
       background: selected ? 'var(--surface-brand-soft)' : hover && clickable ? 'var(--action-ghost-hover)' : 'var(--neutral-100)',
-      color: selected ? 'var(--green-700)' : 'var(--text-body)',
+      color: selected ? 'var(--green-700)' : 'var(--text-default)',
       fontSize: 'var(--text-body-sm)',
       fontWeight: selected ? 'var(--weight-medium)' : 'var(--weight-regular)',
       cursor: clickable ? 'pointer' : 'default',
@@ -1538,7 +1538,7 @@ function NavBar({
       style: {
         fontSize: 'var(--text-body-sm)',
         fontWeight: on ? 'var(--weight-semibold)' : 'var(--weight-regular)',
-        color: onBrand ? on ? 'var(--bkc-white)' : 'rgba(255,255,255,.78)' : on ? 'var(--text-brand)' : 'var(--text-body)'
+        color: onBrand ? on ? 'var(--bkc-white)' : 'rgba(255,255,255,.78)' : on ? 'var(--text-brand)' : 'var(--text-default)'
       }
     }, label));
   }), action && /*#__PURE__*/React.createElement("li", {
@@ -2433,7 +2433,7 @@ function InspectorPanel({
       justifyContent: 'space-between',
       fontFamily: 'var(--font-data)',
       fontSize: 'var(--text-caption)',
-      color: 'var(--text-body)'
+      color: 'var(--text-default)'
     }
   }, /*#__PURE__*/React.createElement("span", null, l), /*#__PURE__*/React.createElement("span", {
     style: {
@@ -2963,7 +2963,7 @@ const TH = {
 const TD = {
   padding: 'var(--space-4)',
   fontSize: 'var(--text-body-sm)',
-  color: 'var(--text-body)',
+  color: 'var(--text-default)',
   borderTop: '1px solid var(--border-subtle)',
   whiteSpace: 'nowrap'
 };
@@ -3849,7 +3849,7 @@ function HomeScreen({
   }), /*#__PURE__*/React.createElement("span", {
     className: "bkc-eyebrow",
     style: {
-      color: 'var(--text-body)'
+      color: 'var(--text-default)'
     }
   }, "Komunitas geospasial Indonesia")), /*#__PURE__*/React.createElement("h1", {
     style: {
@@ -4435,7 +4435,7 @@ function SiteHeader({
     style: {
       fontSize: 'var(--text-body-sm)',
       fontWeight: page === it ? 'var(--weight-semibold)' : 'var(--weight-regular)',
-      color: page === it ? 'var(--text-brand)' : 'var(--text-body)'
+      color: page === it ? 'var(--text-brand)' : 'var(--text-default)'
     }
   }, it))), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement(Button, {
     variant: "brand",

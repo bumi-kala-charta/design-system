@@ -76,7 +76,7 @@ function InspectorPanel({ point, onClose }) {
             <div style={{ display: 'grid', gap: 'var(--space-3)' }}>
               {[['BM-01 → CORS-SLM', 4.2, 0.42], ['BM-01 → BM-02', 6.8, 0.68], ['BM-01 → BM-05', 3.1, 0.31], ['BM-01 → BM-07', 9.4, 0.94]].map(([l, v, w]) => (
                 <div key={l}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-data)', fontSize: 'var(--text-caption)', color: 'var(--text-body)' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontFamily: 'var(--font-data)', fontSize: 'var(--text-caption)', color: 'var(--text-default)' }}>
                     <span>{l}</span><span style={{ color: v > 8 ? 'var(--bkc-orange)' : 'var(--text-subtle)' }}>{String(v).replace('.', ',')}</span>
                   </div>
                   <div style={{ height: 5, background: 'var(--neutral-150)', borderRadius: 999, marginTop: 5, overflow: 'hidden' }}>

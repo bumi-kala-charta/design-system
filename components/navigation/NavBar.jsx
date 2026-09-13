@@ -30,7 +30,7 @@ export function NavBar({ items = [], active, action, tone = 'default', assetBase
                 style={{
                   fontSize: 'var(--text-body-sm)',
                   fontWeight: on ? 'var(--weight-semibold)' : 'var(--weight-regular)',
-                  color: onBrand ? (on ? 'var(--bkc-white)' : 'rgba(255,255,255,.78)') : on ? 'var(--text-brand)' : 'var(--text-body)',
+                  color: onBrand ? (on ? 'var(--bkc-white)' : 'rgba(255,255,255,.78)') : on ? 'var(--text-brand)' : 'var(--text-default)',
                 }}
               >
                 {label}

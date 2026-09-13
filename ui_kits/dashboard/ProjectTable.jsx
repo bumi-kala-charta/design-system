@@ -10,7 +10,7 @@ const DASH_ROWS = [
 ];
 
 const TH = { textAlign: 'left', padding: '0 var(--space-4) var(--space-3)', fontFamily: 'var(--font-data)', fontSize: 'var(--text-micro)', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--text-subtle)', fontWeight: 'var(--weight-regular)', whiteSpace: 'nowrap' };
-const TD = { padding: 'var(--space-4)', fontSize: 'var(--text-body-sm)', color: 'var(--text-body)', borderTop: '1px solid var(--border-subtle)', whiteSpace: 'nowrap' };
+const TD = { padding: 'var(--space-4)', fontSize: 'var(--text-body-sm)', color: 'var(--text-default)', borderTop: '1px solid var(--border-subtle)', whiteSpace: 'nowrap' };
 
 function ProjectTable({ onOpen }) {
   const [status, setStatus] = React.useState('semua');

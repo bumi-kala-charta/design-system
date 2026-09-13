@@ -28,7 +28,7 @@ function SiteHeader({ page, go }) {
             <a
               href="#"
               onClick={(e) => { e.preventDefault(); go(it); }}
-              style={{ fontSize: 'var(--text-body-sm)', fontWeight: page === it ? 'var(--weight-semibold)' : 'var(--weight-regular)', color: page === it ? 'var(--text-brand)' : 'var(--text-body)' }}
+              style={{ fontSize: 'var(--text-body-sm)', fontWeight: page === it ? 'var(--weight-semibold)' : 'var(--weight-regular)', color: page === it ? 'var(--text-brand)' : 'var(--text-default)' }}
             >
               {it}
             </a>
