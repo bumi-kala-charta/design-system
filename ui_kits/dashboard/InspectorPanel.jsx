@@ -4,16 +4,14 @@ function InspectorPanel({ point, onClose }) {
   const [tab, setTab] = React.useState('Metadata');
   if (!point) {
     return (
-      <aside style={{ width: 340, flex: '0 0 auto', background: 'var(--surface-page)', borderLeft: '1px solid var(--border-subtle)', display: 'grid', placeItems: 'center', padding: 'var(--space-7)', textAlign: 'center' }}>
-        <div>
-          <Icon name="mouse-pointer-click" size={26} color="var(--neutral-400)" style={{ margin: '0 auto 12px' }} />
-          <p style={{ fontSize: 'var(--text-body-sm)', color: 'var(--text-subtle)' }}>Pilih satu titik kontrol di peta untuk melihat metadatanya.</p>
-        </div>
+      <aside className="bkc-glass" style={{ ...floatingPanel('right', 340), bottom: 'auto', flexDirection: 'row', alignItems: 'center', gap: 'var(--space-3)', padding: 'var(--space-4) var(--space-5)' }}>
+        <Icon name="mouse-pointer-click" size={20} color="var(--text-muted)" />
+        <p style={{ fontSize: 'var(--text-body-sm)', color: 'var(--text-muted)' }}>Pilih satu titik kontrol di peta untuk melihat metadatanya.</p>
       </aside>
     );
   }
   return (
-    <aside style={{ width: 340, flex: '0 0 auto', background: 'var(--surface-page)', borderLeft: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+    <aside className="bkc-glass" style={floatingPanel('right', 340)}>
       <div style={{ padding: 'var(--space-5)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 'var(--space-3)' }}>
           <div>

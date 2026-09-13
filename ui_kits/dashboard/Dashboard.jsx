@@ -8,6 +8,16 @@ const POINTS = [
   { id: 'BM-07', x: 26, y: 70, type: 'bm', quality: 'Fix', order: '3', e: '790.982,244 m', n: '9.234.118,506 m', h: '689,558 m', ho: '687,438 m', sh: '±9 mm', sv: '±17 mm' },
 ];
 
+// Floating panel geometry, shared so the map controls clear the panels.
+const PANEL_GAP = 16;
+const PANEL_LAYER = 288;
+const PANEL_INSPECTOR = 340;
+const floatingPanel = (side, width) => ({
+  position: 'absolute', top: PANEL_GAP, bottom: PANEL_GAP, [side]: PANEL_GAP, width, zIndex: 5,
+  borderRadius: 'var(--radius-card)', overflow: 'hidden', display: 'flex', flexDirection: 'column',
+});
+Object.assign(window, { PANEL_GAP, floatingPanel });
+
 function Dashboard() {
   const [section, setSection] = React.useState('peta');
   const [project, setProject] = React.useState('Topografi Waduk Jatigede');
@@ -29,9 +39,10 @@ function Dashboard() {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', minWidth: 0 }}>
         <TopBar project={project} onExport={() => setExportOpen(true)} />
         {section === 'peta' ? (
-          <div style={{ flex: 1, display: 'flex', minHeight: 0 }}>
+          /* Map fills the view; layer and inspector panels float over it as frosted glass. */
+          <div style={{ flex: 1, display: 'flex', minHeight: 0, position: 'relative' }}>
+            <MapCanvas layers={layers} points={POINTS} selected={selected} onSelect={setSelected} insetLeft={PANEL_LAYER} insetRight={PANEL_INSPECTOR} />
             <LayerPanel layers={layers} toggle={toggle} />
-            <MapCanvas layers={layers} points={POINTS} selected={selected} onSelect={setSelected} />
             <InspectorPanel point={point} onClose={() => setSelected(null)} />
           </div>
         ) : (

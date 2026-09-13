@@ -76,6 +76,10 @@
   --surface-accent-soft:rgba(234,144,18,.12);
   --surface-dark:var(--neutral-900);
   --surface-overlay:rgba(27,34,30,.44);
+  /* glass — only over maps, photos, or the green contour field; see .bkc-glass */
+  --surface-glass:rgba(255,255,255,.62);
+  --surface-glass-brand:rgba(255,255,255,.12);
+  --surface-glass-ink:rgba(27,34,30,.48);
 
   /* ---- semantic: border ---- */
   --border-subtle:#EAE8E3;
@@ -83,6 +87,9 @@
   --border-strong:var(--neutral-900);
   --border-brand:var(--bkc-green);
   --border-on-dark:rgba(255,255,255,.22);
+  --border-glass:rgba(255,255,255,.72);
+  --border-glass-brand:rgba(255,255,255,.24);
+  --border-glass-ink:rgba(255,255,255,.14);
 
   /* ---- semantic: interactive ---- */
   --action-primary:var(--neutral-900);

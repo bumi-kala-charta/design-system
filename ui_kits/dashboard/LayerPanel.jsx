@@ -20,7 +20,7 @@ const LAYER_GROUPS = [
 function LayerPanel({ layers, toggle }) {
   const [q, setQ] = React.useState('');
   return (
-    <aside style={{ width: 288, flex: '0 0 auto', background: 'var(--surface-page)', borderRight: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
+    <aside className="bkc-glass" style={floatingPanel('left', 288)}>
       <div style={{ padding: 'var(--space-4)', borderBottom: '1px solid var(--border-subtle)' }}>
         <Input placeholder="Cari lapisan" iconLeft={<Icon name="search" size={15} />} value={q} onChange={(e) => setQ(e.target.value)} />
       </div>

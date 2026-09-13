@@ -29,7 +29,7 @@ photographic slot in this system is an explicit labelled placeholder.
 | `tokens/` | `fonts.css` `colors.css` `typography.css` `spacing.css` `shape.css` `patterns.css` `contour-plates.css` `base.css` |
 | `assets/` | Emblem, squirrel mark (4 colourways), 4 contour plates (SVG), self-hosted IBM Plex woff2 |
 | `components/` | 23 React primitives in six groups — see below |
-| `guidelines/` | 23 foundation specimen cards (Colors, Type, Spacing, Brand) |
+| `guidelines/` | 24 foundation specimen cards (Colors, Type, Spacing, Brand) |
 | `ui_kits/website/` | Community website — 5 click-through screens |
 | `ui_kits/dashboard/` | Map & project dashboard — map view + project register |
 | `slides/` | 7 slide-type specimens at 1280×720 |
@@ -201,9 +201,22 @@ Cards carry a **hairline border at rest** (`#EAE8E3`) and **no shadow**. The sha
 `0 14px 30px rgba(27,34,30,.09)` plus a 3px lift. Border and shadow never appear together at rest.
 All shadows are warm ink (`rgba(27,34,30,…)`), never black, never coloured.
 
-Transparency and blur appear in exactly two places: the sticky site header (white at 92% with an 8px
-blur) and the dialog overlay (warm ink at 44% with a 3px blur). Nowhere else — no frosted cards, no
-glass panels.
+Transparency and blur appear in three places: the sticky site header (white at 92% with an 8px
+blur), the dialog overlay (warm ink at 44% with a 3px blur), and **frosted glass** (`.bkc-glass`).
+
+Glass is for elements that **float over something worth seeing** — a map, a field photo, or the green
+contour field: map toolbars, layer and inspector panels, coordinate readouts, hero navigation and stat
+strips, photo captions. One blur for every size, **5px** at 140% saturation, with a 1px translucent
+border, an inner top highlight, and `--shadow-glass`. Three variants only:
+
+- **light** (default) — white at 62%, over maps and bright photos.
+- **brand** (`data-glass="brand"`) — white at 12% with white text, over the green field.
+- **ink** (`data-glass="ink"`) — warm ink at 48% with white text, over photos.
+
+Never glass over a plain page or a card (there is nothing to frost, so it only reads as grey), never
+orange glass, never glass on glass, and never long body copy on brand glass. Content cards in a grid
+keep the hairline border. Without `backdrop-filter`, or under `prefers-reduced-transparency`, each
+variant falls back to a near-solid fill.
 
 ## Motion
 

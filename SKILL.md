@@ -38,7 +38,7 @@ fundamentals, visual foundations, and known gaps. This file is only the map.
 | `ui_kits/website/`, `ui_kits/dashboard/` | Full screen recreations — the best reference for composition and density. |
 | `slides/`, `social/` | Ready 1280×720 slide and 1080×1350 Instagram specimens, one per layout. |
 | `templates/` | Working deck and carousel starters. |
-| `guidelines/` | 23 specimen pages, one per foundation topic. |
+| `guidelines/` | 24 specimen pages, one per foundation topic. |
 | `site/` | Human-facing documentation website. |
 | `assets/` | Emblem, squirrel mark (4 colourways), 4 contour plates (SVG), IBM Plex woff2. |
 
@@ -92,6 +92,19 @@ terrain — broad lines, open ground — not a wide area packed with hills.
 
 The secondary motif is the globe graticule (`.bkc-orbit` with six `<i>` children), reserved for
 hero and closing moments. **The two motifs never share a surface.**
+
+## Frosted glass
+
+For elements floating over a map, a field photo, or the green contour field — never over a plain
+page or card. One 5px blur; three variants:
+
+```html
+<div class="bkc-glass">…</div>                      <!-- light: over maps, bright photos -->
+<nav class="bkc-glass" data-glass="brand">…</nav>   <!-- over green -->
+<div class="bkc-glass" data-glass="ink">…</div>     <!-- white text over photos -->
+```
+
+In React pass `className="bkc-glass"`. No orange glass, no glass on glass, no long body copy on brand glass.
 
 ## Icons
 
