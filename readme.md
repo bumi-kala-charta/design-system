@@ -138,7 +138,9 @@ never carries a selection state (that is always green) and never fills more than
 screen except in social frames.
 
 Neutrals are **warm**, anchored on the guideline's `#EDECE9` paper. There is no blue-grey anywhere
-in this system; a cool grey next to `#358C67` reads as an error. Backgrounds alternate white and
+in this system; a cool grey next to `#358C67` reads as an error. The one exception is
+`--bkc-stratum` `#9BA1A6`, sampled from the emblem's stratum band — it stays inside the emblem and
+the low-emphasis `--status-info`, never as a neutral for text, borders, or surfaces. Backgrounds alternate white and
 paper; a section is either white, paper, brand green, or ink `#1B221E` — never a fifth thing, and
 never more than two background colours in one composition.
 
@@ -268,4 +270,3 @@ mark — the squirrel — and the emblem it lives in.
 5. **No basemap or vector data** for the dashboard — its map canvas is schematic.
 6. **Fonts are Google Fonts IBM Plex** (SIL OFL 1.1), self-hosted latin subset. Matches the guideline
    exactly; no substitution was needed.
-"# design-system" 
