@@ -20,6 +20,28 @@ button,input,select,textarea{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px}
 ::selection{background:var(--surface-brand-soft);color:var(--text-strong)}
 
-/* Two utilities used across every BKC surface. */
+/* Utilities used across BKC surfaces. */
 .bkc-eyebrow{font-family:var(--font-data);font-size:var(--text-eyebrow);letter-spacing:var(--tracking-mono);text-transform:uppercase;color:var(--text-subtle)}
 .bkc-wordmark{font-family:var(--font-sans);font-weight:var(--weight-bold);letter-spacing:var(--tracking-wordmark);text-transform:uppercase;color:var(--text-strong)}
+
+/* Frosted glass for elements floating over a map, a photo, or the green contour field.
+   Never over a plain page or card — there is nothing behind it to frost.
+   Variant: omit (light, over maps and photos) / data-glass="brand" (over green) / data-glass="ink" (white text over photos). */
+.bkc-glass{
+  --glass-bg:var(--surface-glass);--glass-border:var(--border-glass);
+  background:var(--glass-bg);
+  border:1px solid var(--glass-border);
+  box-shadow:inset 0 1px 0 var(--glass-border),var(--shadow-glass);
+  -webkit-backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate));
+  backdrop-filter:blur(var(--glass-blur)) saturate(var(--glass-saturate))}
+.bkc-glass[data-glass="brand"]{--glass-bg:var(--surface-glass-brand);--glass-border:var(--border-glass-brand);color:var(--text-on-dark)}
+.bkc-glass[data-glass="ink"]{--glass-bg:var(--surface-glass-ink);--glass-border:var(--border-glass-ink);color:var(--text-on-dark)}
+/* Solid fallback when blur is unsupported or the reader asks for less transparency. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .bkc-glass{--glass-bg:rgba(255,255,255,.94)}
+  .bkc-glass[data-glass="brand"]{--glass-bg:var(--green-600)}
+  .bkc-glass[data-glass="ink"]{--glass-bg:rgba(27,34,30,.9)}}
+@media (prefers-reduced-transparency:reduce){
+  .bkc-glass{--glass-bg:rgba(255,255,255,.94)}
+  .bkc-glass[data-glass="brand"]{--glass-bg:var(--green-600)}
+  .bkc-glass[data-glass="ink"]{--glass-bg:rgba(27,34,30,.9)}}

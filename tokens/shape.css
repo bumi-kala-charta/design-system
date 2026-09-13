@@ -20,6 +20,11 @@
   --shadow-overlay:0 24px 60px rgba(27,34,30,.22);
   --shadow-inset-hairline:inset 0 0 0 1px var(--border-subtle);
   --ring-focus:0 0 0 3px rgba(53,140,103,.28);
+  --shadow-glass:0 12px 32px rgba(27,34,30,.14);
+
+  /* glass — one blur for every size; surfaces and borders live in colors.css */
+  --glass-blur:5px; /* @kind other */
+  --glass-saturate:140%; /* @kind other */
 
   /* motion — short, eased, no bounce */
   --ease-standard:cubic-bezier(.2,0,0,1); /* @kind other */

@@ -3,7 +3,10 @@ const { Icon, IconButton, Tooltip, Badge, Tabs } = window.BumiKalaChartaDesignSy
 /* Schematic map canvas. No basemap imagery or vector data was supplied with the brand
    materials, so the canvas renders the brand's own contour + graticule layers with
    plotted control points. Swap in a real tile/vector source in production. */
-function MapCanvas({ layers, points, selected, onSelect }) {
+function MapCanvas({ layers, points, selected, onSelect, insetLeft = 0, insetRight = 0 }) {
+  // Controls sit just inside the floating panels so they never slide under the glass.
+  const left = insetLeft ? PANEL_GAP + insetLeft + 12 : 16;
+  const right = insetRight ? PANEL_GAP + insetRight + 12 : 16;
   const [tool, setTool] = React.useState('pan');
   const tools = [
     ['pan', 'move', 'Geser'],
@@ -44,7 +47,7 @@ function MapCanvas({ layers, points, selected, onSelect }) {
       })}
 
       {/* toolbar */}
-      <div style={{ position: 'absolute', left: 16, top: 16, display: 'flex', flexDirection: 'column', gap: 4, padding: 5, background: 'rgba(255,255,255,.94)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+      <div className="bkc-glass" style={{ position: 'absolute', left, top: 16, display: 'flex', flexDirection: 'column', gap: 4, padding: 5, borderRadius: 'var(--radius-md)' }}>
         {tools.map(([id, icon, label]) => (
           <Tooltip key={id} label={label} side="right">
             <button
@@ -58,14 +61,14 @@ function MapCanvas({ layers, points, selected, onSelect }) {
       </div>
 
       {/* zoom */}
-      <div style={{ position: 'absolute', right: 16, top: 16, display: 'flex', flexDirection: 'column', gap: 4, padding: 5, background: 'rgba(255,255,255,.94)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+      <div className="bkc-glass" style={{ position: 'absolute', right, top: 16, display: 'flex', flexDirection: 'column', gap: 4, padding: 5, borderRadius: 'var(--radius-md)' }}>
         <IconButton label="Perbesar" variant="ghost" size="sm"><Icon name="plus" size={16} /></IconButton>
         <IconButton label="Perkecil" variant="ghost" size="sm"><Icon name="minus" size={16} /></IconButton>
         <IconButton label="Kompas" variant="ghost" size="sm"><Icon name="compass" size={16} /></IconButton>
       </div>
 
       {/* scale bar + coordinate readout */}
-      <div style={{ position: 'absolute', left: 16, bottom: 14, display: 'flex', alignItems: 'flex-end', gap: 'var(--space-5)' }}>
+      <div className="bkc-glass" style={{ position: 'absolute', left, bottom: 16, display: 'flex', alignItems: 'flex-end', gap: 'var(--space-5)', padding: 'var(--space-2) var(--space-4)', borderRadius: 'var(--radius-md)' }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'flex-end', height: 9 }}>
             <span style={{ width: 60, height: 7, background: 'var(--neutral-900)' }} />
@@ -75,12 +78,12 @@ function MapCanvas({ layers, points, selected, onSelect }) {
             <span>0</span><span>250</span><span>500 m</span>
           </div>
         </div>
-        <span style={{ fontFamily: 'var(--font-data)', fontSize: 10.5, color: 'var(--neutral-800)', background: 'rgba(255,255,255,.82)', padding: '3px 7px', borderRadius: 3 }}>
+        <span style={{ fontFamily: 'var(--font-data)', fontSize: 10.5, color: 'var(--neutral-800)', paddingBottom: 2 }}>
           −6.91750, 107.61910 · 712 m
         </span>
       </div>
 
-      <div style={{ position: 'absolute', right: 16, bottom: 14, display: 'flex', gap: 6 }}>
+      <div style={{ position: 'absolute', right, bottom: 16, display: 'flex', gap: 6 }}>
         <Badge tone="neutral" size="sm">Skala 1:1.000</Badge>
         <Badge tone="neutral" size="sm">Interval kontur 12,5 m</Badge>
       </div>

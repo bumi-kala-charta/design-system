@@ -1,4 +1,4 @@
-/* @ds-bundle: {"format":4,"namespace":"BumiKalaChartaDesignSystem_5e0b40","components":[{"name":"ContourField","sourcePath":"components/brand/ContourField.jsx"},{"name":"CoordinateReadout","sourcePath":"components/brand/CoordinateReadout.jsx"},{"name":"Icon","sourcePath":"components/brand/Icon.jsx"},{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Stat","sourcePath":"components/core/Stat.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"AvatarStack","sourcePath":"components/patterns/AvatarStack.jsx"},{"name":"EventCard","sourcePath":"components/patterns/EventCard.jsx"}],"sourceHashes":{"components/brand/ContourField.jsx":"c139602fb48a","components/brand/CoordinateReadout.jsx":"ce93c1d0049f","components/brand/Icon.jsx":"0d3ae800e014","components/brand/Logo.jsx":"66902c03b20b","components/core/Badge.jsx":"75546160f63a","components/core/Button.jsx":"d3a89e324d56","components/core/Card.jsx":"4d91c5488894","components/core/IconButton.jsx":"dfe9dfdbcef5","components/core/SectionHeading.jsx":"0ea8e29f448d","components/core/Stat.jsx":"ee93c7abd90b","components/core/Tag.jsx":"822796521da0","components/feedback/Dialog.jsx":"5ab51a0279a2","components/feedback/Toast.jsx":"1f1c2e4c4ca1","components/feedback/Tooltip.jsx":"da633d2c1f86","components/forms/Checkbox.jsx":"4683ab88e958","components/forms/Input.jsx":"ef0ef6f01315","components/forms/Radio.jsx":"f29b167e1cbe","components/forms/Select.jsx":"0da49e9779dc","components/forms/Switch.jsx":"a44dd0ecf7c3","components/navigation/NavBar.jsx":"bb6bfda74c7c","components/navigation/Tabs.jsx":"973c3f87af60","components/patterns/AvatarStack.jsx":"52c37e433aab","components/patterns/EventCard.jsx":"70429b29aca0","site/embed.js":"cecec1cb6a1b","ui_kits/dashboard/Chrome.jsx":"afd5aa1d21df","ui_kits/dashboard/Dashboard.jsx":"a1129a7e2e43","ui_kits/dashboard/InspectorPanel.jsx":"d564d82965b7","ui_kits/dashboard/LayerPanel.jsx":"e8ac020e2325","ui_kits/dashboard/MapCanvas.jsx":"5f2ea239bd5d","ui_kits/dashboard/ProjectTable.jsx":"b885755ea4d7","ui_kits/website/AboutScreen.jsx":"2c9b5aae6206","ui_kits/website/App.jsx":"6162debd2481","ui_kits/website/DiscussionScreen.jsx":"5cadd42c1612","ui_kits/website/HomeScreen.jsx":"ade77f429912","ui_kits/website/ProjectsScreen.jsx":"3eee8a4710ff","ui_kits/website/Shared.jsx":"c228a485dcd6","ui_kits/website/TrainingScreen.jsx":"88cb5c4531dd"},"inlinedExternals":[],"unexposedExports":[]} */
+/* @ds-bundle: {"format":4,"namespace":"BumiKalaChartaDesignSystem_5e0b40","components":[{"name":"ContourField","sourcePath":"components/brand/ContourField.jsx"},{"name":"CoordinateReadout","sourcePath":"components/brand/CoordinateReadout.jsx"},{"name":"Icon","sourcePath":"components/brand/Icon.jsx"},{"name":"Logo","sourcePath":"components/brand/Logo.jsx"},{"name":"Badge","sourcePath":"components/core/Badge.jsx"},{"name":"Button","sourcePath":"components/core/Button.jsx"},{"name":"Card","sourcePath":"components/core/Card.jsx"},{"name":"IconButton","sourcePath":"components/core/IconButton.jsx"},{"name":"SectionHeading","sourcePath":"components/core/SectionHeading.jsx"},{"name":"Stat","sourcePath":"components/core/Stat.jsx"},{"name":"Tag","sourcePath":"components/core/Tag.jsx"},{"name":"Dialog","sourcePath":"components/feedback/Dialog.jsx"},{"name":"Toast","sourcePath":"components/feedback/Toast.jsx"},{"name":"Tooltip","sourcePath":"components/feedback/Tooltip.jsx"},{"name":"Checkbox","sourcePath":"components/forms/Checkbox.jsx"},{"name":"Input","sourcePath":"components/forms/Input.jsx"},{"name":"Radio","sourcePath":"components/forms/Radio.jsx"},{"name":"Select","sourcePath":"components/forms/Select.jsx"},{"name":"Switch","sourcePath":"components/forms/Switch.jsx"},{"name":"NavBar","sourcePath":"components/navigation/NavBar.jsx"},{"name":"Tabs","sourcePath":"components/navigation/Tabs.jsx"},{"name":"AvatarStack","sourcePath":"components/patterns/AvatarStack.jsx"},{"name":"EventCard","sourcePath":"components/patterns/EventCard.jsx"}],"sourceHashes":{"components/brand/ContourField.jsx":"c139602fb48a","components/brand/CoordinateReadout.jsx":"ce93c1d0049f","components/brand/Icon.jsx":"0d3ae800e014","components/brand/Logo.jsx":"66902c03b20b","components/core/Badge.jsx":"75546160f63a","components/core/Button.jsx":"d3a89e324d56","components/core/Card.jsx":"4d91c5488894","components/core/IconButton.jsx":"dfe9dfdbcef5","components/core/SectionHeading.jsx":"0ea8e29f448d","components/core/Stat.jsx":"ee93c7abd90b","components/core/Tag.jsx":"822796521da0","components/feedback/Dialog.jsx":"5ab51a0279a2","components/feedback/Toast.jsx":"1f1c2e4c4ca1","components/feedback/Tooltip.jsx":"da633d2c1f86","components/forms/Checkbox.jsx":"4683ab88e958","components/forms/Input.jsx":"ef0ef6f01315","components/forms/Radio.jsx":"f29b167e1cbe","components/forms/Select.jsx":"0da49e9779dc","components/forms/Switch.jsx":"a44dd0ecf7c3","components/navigation/NavBar.jsx":"bb6bfda74c7c","components/navigation/Tabs.jsx":"973c3f87af60","components/patterns/AvatarStack.jsx":"52c37e433aab","components/patterns/EventCard.jsx":"70429b29aca0","site/embed.js":"cecec1cb6a1b","ui_kits/dashboard/Chrome.jsx":"afd5aa1d21df","ui_kits/dashboard/Dashboard.jsx":"5e8c104161ee","ui_kits/dashboard/InspectorPanel.jsx":"36101938b95e","ui_kits/dashboard/LayerPanel.jsx":"2d3efbb3a67d","ui_kits/dashboard/MapCanvas.jsx":"3ca07806a88e","ui_kits/dashboard/ProjectTable.jsx":"b885755ea4d7","ui_kits/website/AboutScreen.jsx":"2c9b5aae6206","ui_kits/website/App.jsx":"6162debd2481","ui_kits/website/DiscussionScreen.jsx":"5cadd42c1612","ui_kits/website/HomeScreen.jsx":"ade77f429912","ui_kits/website/ProjectsScreen.jsx":"3eee8a4710ff","ui_kits/website/Shared.jsx":"c228a485dcd6","ui_kits/website/TrainingScreen.jsx":"88cb5c4531dd"},"inlinedExternals":[],"unexposedExports":[]} */
 
 (() => {
 
@@ -2122,6 +2122,27 @@ const POINTS = [{
   sh: '±9 mm',
   sv: '±17 mm'
 }];
+
+// Floating panel geometry, shared so the map controls clear the panels.
+const PANEL_GAP = 16;
+const PANEL_LAYER = 288;
+const PANEL_INSPECTOR = 340;
+const floatingPanel = (side, width) => ({
+  position: 'absolute',
+  top: PANEL_GAP,
+  bottom: PANEL_GAP,
+  [side]: PANEL_GAP,
+  width,
+  zIndex: 5,
+  borderRadius: 'var(--radius-card)',
+  overflow: 'hidden',
+  display: 'flex',
+  flexDirection: 'column'
+});
+Object.assign(window, {
+  PANEL_GAP,
+  floatingPanel
+});
 function Dashboard() {
   const [section, setSection] = React.useState('peta');
   const [project, setProject] = React.useState('Topografi Waduk Jatigede');
@@ -2166,20 +2187,26 @@ function Dashboard() {
   }, /*#__PURE__*/React.createElement(TopBar, {
     project: project,
     onExport: () => setExportOpen(true)
-  }), section === 'peta' ? /*#__PURE__*/React.createElement("div", {
+  }), section === 'peta' ?
+  /*#__PURE__*/
+  /* Map fills the view; layer and inspector panels float over it as frosted glass. */
+  React.createElement("div", {
     style: {
       flex: 1,
       display: 'flex',
-      minHeight: 0
+      minHeight: 0,
+      position: 'relative'
     }
-  }, /*#__PURE__*/React.createElement(LayerPanel, {
-    layers: layers,
-    toggle: toggle
-  }), /*#__PURE__*/React.createElement(MapCanvas, {
+  }, /*#__PURE__*/React.createElement(MapCanvas, {
     layers: layers,
     points: POINTS,
     selected: selected,
-    onSelect: setSelected
+    onSelect: setSelected,
+    insetLeft: PANEL_LAYER,
+    insetRight: PANEL_INSPECTOR
+  }), /*#__PURE__*/React.createElement(LayerPanel, {
+    layers: layers,
+    toggle: toggle
   }), /*#__PURE__*/React.createElement(InspectorPanel, {
     point: point,
     onClose: () => setSelected(null)
@@ -2257,40 +2284,29 @@ function InspectorPanel({
   const [tab, setTab] = React.useState('Metadata');
   if (!point) {
     return /*#__PURE__*/React.createElement("aside", {
+      className: "bkc-glass",
       style: {
-        width: 340,
-        flex: '0 0 auto',
-        background: 'var(--surface-page)',
-        borderLeft: '1px solid var(--border-subtle)',
-        display: 'grid',
-        placeItems: 'center',
-        padding: 'var(--space-7)',
-        textAlign: 'center'
+        ...floatingPanel('right', 340),
+        bottom: 'auto',
+        flexDirection: 'row',
+        alignItems: 'center',
+        gap: 'var(--space-3)',
+        padding: 'var(--space-4) var(--space-5)'
       }
-    }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Icon, {
+    }, /*#__PURE__*/React.createElement(Icon, {
       name: "mouse-pointer-click",
-      size: 26,
-      color: "var(--neutral-400)",
-      style: {
-        margin: '0 auto 12px'
-      }
+      size: 20,
+      color: "var(--text-muted)"
     }), /*#__PURE__*/React.createElement("p", {
       style: {
         fontSize: 'var(--text-body-sm)',
-        color: 'var(--text-subtle)'
+        color: 'var(--text-muted)'
       }
-    }, "Pilih satu titik kontrol di peta untuk melihat metadatanya.")));
+    }, "Pilih satu titik kontrol di peta untuk melihat metadatanya."));
   }
   return /*#__PURE__*/React.createElement("aside", {
-    style: {
-      width: 340,
-      flex: '0 0 auto',
-      background: 'var(--surface-page)',
-      borderLeft: '1px solid var(--border-subtle)',
-      display: 'flex',
-      flexDirection: 'column',
-      overflow: 'hidden'
-    }
+    className: "bkc-glass",
+    style: floatingPanel('right', 340)
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       padding: 'var(--space-5)',
@@ -2562,15 +2578,8 @@ function LayerPanel({
 }) {
   const [q, setQ] = React.useState('');
   return /*#__PURE__*/React.createElement("aside", {
-    style: {
-      width: 288,
-      flex: '0 0 auto',
-      background: 'var(--surface-page)',
-      borderRight: '1px solid var(--border-subtle)',
-      display: 'flex',
-      flexDirection: 'column',
-      overflow: 'hidden'
-    }
+    className: "bkc-glass",
+    style: floatingPanel('left', 288)
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       padding: 'var(--space-4)',
@@ -2698,8 +2707,13 @@ function MapCanvas({
   layers,
   points,
   selected,
-  onSelect
+  onSelect,
+  insetLeft = 0,
+  insetRight = 0
 }) {
+  // Controls sit just inside the floating panels so they never slide under the glass.
+  const left = insetLeft ? PANEL_GAP + insetLeft + 12 : 16;
+  const right = insetRight ? PANEL_GAP + insetRight + 12 : 16;
   const [tool, setTool] = React.useState('pan');
   const tools = [['pan', 'move', 'Geser'], ['select', 'mouse-pointer-2', 'Pilih'], ['measure', 'ruler', 'Ukur jarak'], ['area', 'shapes', 'Ukur luas'], ['point', 'map-pin', 'Tambah titik']];
   return /*#__PURE__*/React.createElement("div", {
@@ -2799,17 +2813,16 @@ function MapCanvas({
       }
     }, p.id));
   }), /*#__PURE__*/React.createElement("div", {
+    className: "bkc-glass",
     style: {
       position: 'absolute',
-      left: 16,
+      left,
       top: 16,
       display: 'flex',
       flexDirection: 'column',
       gap: 4,
       padding: 5,
-      background: 'rgba(255,255,255,.94)',
-      borderRadius: 'var(--radius-md)',
-      boxShadow: 'var(--shadow-sm)'
+      borderRadius: 'var(--radius-md)'
     }
   }, tools.map(([id, icon, label]) => /*#__PURE__*/React.createElement(Tooltip, {
     key: id,
@@ -2832,17 +2845,16 @@ function MapCanvas({
     name: icon,
     size: 17
   }))))), /*#__PURE__*/React.createElement("div", {
+    className: "bkc-glass",
     style: {
       position: 'absolute',
-      right: 16,
+      right,
       top: 16,
       display: 'flex',
       flexDirection: 'column',
       gap: 4,
       padding: 5,
-      background: 'rgba(255,255,255,.94)',
-      borderRadius: 'var(--radius-md)',
-      boxShadow: 'var(--shadow-sm)'
+      borderRadius: 'var(--radius-md)'
     }
   }, /*#__PURE__*/React.createElement(IconButton, {
     label: "Perbesar",
@@ -2866,13 +2878,16 @@ function MapCanvas({
     name: "compass",
     size: 16
   }))), /*#__PURE__*/React.createElement("div", {
+    className: "bkc-glass",
     style: {
       position: 'absolute',
-      left: 16,
-      bottom: 14,
+      left,
+      bottom: 16,
       display: 'flex',
       alignItems: 'flex-end',
-      gap: 'var(--space-5)'
+      gap: 'var(--space-5)',
+      padding: 'var(--space-2) var(--space-4)',
+      borderRadius: 'var(--radius-md)'
     }
   }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
     style: {
@@ -2908,15 +2923,13 @@ function MapCanvas({
       fontFamily: 'var(--font-data)',
       fontSize: 10.5,
       color: 'var(--neutral-800)',
-      background: 'rgba(255,255,255,.82)',
-      padding: '3px 7px',
-      borderRadius: 3
+      paddingBottom: 2
     }
   }, "\u22126.91750, 107.61910 \xB7 712 m")), /*#__PURE__*/React.createElement("div", {
     style: {
       position: 'absolute',
-      right: 16,
-      bottom: 14,
+      right,
+      bottom: 16,
       display: 'flex',
       gap: 6
     }

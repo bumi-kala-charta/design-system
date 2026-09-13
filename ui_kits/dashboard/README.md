@@ -10,11 +10,15 @@ Open `index.html`. Design size **1440×820px** (fixed-height app shell, no page 
 | File | Region | What it shows |
 |---|---|---|
 | `Chrome.jsx` | `Rail`, `TopBar` | 64px ink rail with section icons; breadcrumb, CRS readout, export action |
-| `LayerPanel.jsx` | Left panel, 288px | Layer switches grouped into Hasil ukur / Referensi, layer search, symbol legend |
-| `MapCanvas.jsx` | Centre | Contour + graticule layers, plotted control points, tool strip, zoom, scale bar |
-| `InspectorPanel.jsx` | Right panel, 340px | Selected point: metadata / residuals / photos tabs, approve action, empty state |
+| `LayerPanel.jsx` | Floating left, 288px | Layer switches grouped into Hasil ukur / Referensi, layer search, symbol legend |
+| `MapCanvas.jsx` | Full view | Contour + graticule layers, plotted control points, tool strip, zoom, scale bar |
+| `InspectorPanel.jsx` | Floating right, 340px | Selected point: metadata / residuals / photos tabs, approve action, compact empty-state hint |
 | `ProjectTable.jsx` | Alternate view | Project register — stat row, status tabs, search, dense table |
 | `Dashboard.jsx` | — | State, export dialog, toast |
+
+The map fills the whole view. The layer panel, inspector, tool strip, zoom, and scale readout float
+over it as `.bkc-glass` (light variant, 5px blur), 16px from the edges; `MapCanvas` takes
+`insetLeft` / `insetRight` so its controls clear the panels.
 
 ## Interactions that work
 
